@@ -1,0 +1,1028 @@
+checkmk2.0p20 
+<<<check_mk>>>
+Version: 2.0.0p20
+AgentOS: linux
+Hostname: ab.ra.cada.bra
+AgentDirectory: /etc/check_mk
+DataDirectory: /var/lib/check_mk_agent
+SpoolDirectory: /var/lib/check_mk_agent/spool
+PluginsDirectory: /usr/lib/check_mk_agent/plugins
+LocalDirectory: /usr/lib/check_mk_agent/local
+OnlyFrom: 192.168.1.3
+<<<labels:sep(0)>>>
+{"cmk/device_type":"vm"}
+
+<<<df>>>
+tmpfs          tmpfs     3875500       0   3875500       0% /dev/shm
+tmpfs          tmpfs     3875500  385656   3489844      10% /run
+tmpfs          tmpfs     3875500       0   3875500       0% /sys/fs/cgroup
+/dev/vda3      xfs       8377344 5560424   2816920      67% /
+/dev/vda1      xfs       1038336  180940    857396      18% /boot
+/dev/vdb       ext4    103080888 1766640  96054984       2% /opt
+tmpfs          tmpfs      775104       0    775104       0% /run/user/0
+tmpfs          tmpfs     3875500    5924   3869576       1% /opt/omd/sites/demo/tmp
+tmpfs          tmpfs      775104       0    775104       0% /run/user/1000
+tmpfs          tmpfs      775104       0    775104       0% /run/user/1002
+<<<df>>>
+[df_inodes_start]
+tmpfs          tmpfs  968875     1  968874    1% /dev/shm
+tmpfs          tmpfs  968875   511  968364    1% /run
+tmpfs          tmpfs  968875    16  968859    1% /sys/fs/cgroup
+/dev/vda3      xfs   4193792 92412 4101380    3% /
+/dev/vda1      xfs    524288   349  523939    1% /boot
+/dev/vdb       ext4  6553600 39943 6513657    1% /opt
+tmpfs          tmpfs  968875     1  968874    1% /run/user/0
+tmpfs          tmpfs  968875  1484  967391    1% /opt/omd/sites/demo/tmp
+tmpfs          tmpfs  968875     1  968874    1% /run/user/1000
+tmpfs          tmpfs  968875     1  968874    1% /run/user/1002
+[df_inodes_end]
+<<<systemd_units>>>
+[list-unit-files]
+UNIT FILE STATE 
+proc-sys-fs-binfmt_misc.automount static 
+dev-hugepages.mount static 
+dev-mqueue.mount static 
+proc-sys-fs-binfmt_misc.mount static 
+sys-fs-fuse-connections.mount static 
+sys-kernel-config.mount static 
+sys-kernel-debug.mount static 
+tmp.mount disabled
+brandbot.path disabled
+systemd-ask-password-console.path static 
+systemd-ask-password-wall.path static 
+session-1335225.scope static 
+session-1345891.scope static 
+session-1349900.scope static 
+session-1350085.scope static 
+acpid.service enabled 
+arp-ethers.service disabled
+auditd.service enabled 
+autovt@.service enabled 
+blk-availability.service disabled
+brandbot.service static 
+certbot-renew.service static 
+check-mk-agent-async.service disabled
+check-mk-agent@.service static 
+chrony-dnssrv@.service static 
+chrony-wait.service disabled
+chronyd.service enabled 
+cloud-config.service enabled 
+cloud-final.service enabled 
+cloud-init-local.service enabled 
+cloud-init.service enabled 
+console-getty.service disabled
+console-shell.service disabled
+container-getty@.service static 
+cpupower.service disabled
+crond.service enabled 
+dbus-org.freedesktop.hostname1.service static 
+dbus-org.freedesktop.import1.service static 
+dbus-org.freedesktop.locale1.service static 
+dbus-org.freedesktop.login1.service static 
+dbus-org.freedesktop.machine1.service static 
+dbus-org.freedesktop.timedate1.service static 
+dbus.service static 
+debug-shell.service disabled
+dracut-cmdline.service static 
+dracut-initqueue.service static 
+dracut-mount.service static 
+dracut-pre-mount.service static 
+dracut-pre-pivot.service static 
+dracut-pre-trigger.service static 
+dracut-pre-udev.service static 
+dracut-shutdown.service static 
+ebtables.service disabled
+emergency.service static 
+fancontrol.service disabled
+firewalld.service disabled
+fstrim.service static 
+getty@.service enabled 
+halt-local.service static 
+htcacheclean.service static 
+httpd.service enabled 
+initrd-cleanup.service static 
+initrd-parse-etc.service static 
+initrd-switch-root.service static 
+initrd-udevadm-cleanup-db.service static 
+iprdump.service disabled
+iprinit.service disabled
+iprupdate.service disabled
+irqbalance.service enabled 
+kdump.service disabled
+kmod-static-nodes.service static 
+lm_sensors.service enabled 
+messagebus.service static 
+ntpd.service enabled 
+ntpdate.service enabled 
+omd.service enabled 
+polkit.service static 
+postfix.service enabled 
+quotaon.service static 
+radiusd.service disabled
+rc-local.service static 
+rdisc.service disabled
+rescue.service static 
+rhel-autorelabel-mark.service disabled
+rhel-autorelabel.service enabled 
+rhel-configure.service enabled 
+rhel-dmesg.service enabled 
+rhel-domainname.service enabled 
+rhel-import-state.service enabled 
+rhel-loadmodules.service enabled 
+rhel-readonly.service enabled 
+rpcbind.service enabled 
+rsyncd.service disabled
+rsyncd@.service static 
+rsyslog.service enabled 
+selinux-policy-migrate-local-changes@.service static 
+serial-getty@.service disabled
+snmpd.service enabled 
+snmptrapd.service disabled
+sshd-keygen.service static 
+sshd.service enabled 
+sshd@.service static 
+systemd-ask-password-console.service static 
+systemd-ask-password-wall.service static 
+systemd-backlight@.service static 
+systemd-binfmt.service static 
+systemd-bootchart.service disabled
+systemd-firstboot.service static 
+systemd-fsck-root.service static 
+systemd-fsck@.service static 
+systemd-halt.service static 
+systemd-hibernate-resume@.service static 
+systemd-hibernate.service static 
+systemd-hostnamed.service static 
+systemd-hwdb-update.service static 
+systemd-hybrid-sleep.service static 
+systemd-importd.service static 
+systemd-initctl.service static 
+systemd-journal-catalog-update.service static 
+systemd-journal-flush.service static 
+systemd-journald.service static 
+systemd-kexec.service static 
+systemd-localed.service static 
+systemd-logind.service static 
+systemd-machine-id-commit.service static 
+systemd-machined.service static 
+systemd-modules-load.service static 
+systemd-nspawn@.service disabled
+systemd-poweroff.service static 
+systemd-quotacheck.service static 
+systemd-random-seed.service static 
+systemd-readahead-collect.service enabled 
+systemd-readahead-done.service indirect
+systemd-readahead-drop.service enabled 
+systemd-readahead-replay.service enabled 
+systemd-reboot.service static 
+systemd-remount-fs.service static 
+systemd-rfkill@.service static 
+systemd-shutdownd.service static 
+systemd-suspend.service static 
+systemd-sysctl.service static 
+systemd-timedated.service static 
+systemd-tmpfiles-clean.service static 
+systemd-tmpfiles-setup-dev.service static 
+systemd-tmpfiles-setup.service static 
+systemd-udev-settle.service static 
+systemd-udev-trigger.service static 
+systemd-udevd.service static 
+systemd-update-done.service static 
+systemd-update-utmp-runlevel.service static 
+systemd-update-utmp.service static 
+systemd-user-sessions.service static 
+systemd-vconsole-setup.service static 
+tcsd.service disabled
+tuned.service enabled 
+xinetd.service enabled 
+yum-cron.service enabled 
+-.slice static 
+machine.slice static 
+system.slice static 
+user-0.slice static 
+user-1000.slice static 
+user-1002.slice static 
+user.slice static 
+check-mk-agent.socket disabled
+dbus.socket static 
+rpcbind.socket enabled 
+rsyncd.socket disabled
+sshd.socket disabled
+syslog.socket static 
+systemd-initctl.socket static 
+systemd-journald.socket static 
+systemd-shutdownd.socket static 
+systemd-udevd-control.socket static 
+systemd-udevd-kernel.socket static 
+basic.target static 
+bluetooth.target static 
+cloud-config.target static 
+cloud-init.target static 
+cryptsetup-pre.target static 
+cryptsetup.target static 
+ctrl-alt-del.target disabled
+default.target enabled 
+emergency.target static 
+final.target static 
+getty-pre.target static 
+getty.target static 
+graphical.target static 
+halt.target disabled
+hibernate.target static 
+hybrid-sleep.target static 
+initrd-fs.target static 
+initrd-root-fs.target static 
+initrd-switch-root.target static 
+initrd.target static 
+iprutils.target disabled
+kexec.target disabled
+local-fs-pre.target static 
+local-fs.target static 
+machines.target disabled
+multi-user.target enabled 
+network-online.target static 
+network-pre.target static 
+network.target static 
+nss-lookup.target static 
+nss-user-lookup.target static 
+paths.target static 
+poweroff.target disabled
+printer.target static 
+reboot.target disabled
+remote-cryptsetup.target disabled
+remote-fs-pre.target static 
+remote-fs.target enabled 
+rescue.target disabled
+rpcbind.target static 
+runlevel0.target disabled
+runlevel1.target disabled
+runlevel2.target enabled 
+runlevel3.target enabled 
+runlevel4.target enabled 
+runlevel5.target static 
+runlevel6.target disabled
+shutdown.target static 
+sigpwr.target static 
+sleep.target static 
+slices.target static 
+smartcard.target static 
+sockets.target static 
+sound.target static 
+suspend.target static 
+swap.target static 
+sysinit.target static 
+system-update.target static 
+time-sync.target static 
+timers.target static 
+umount.target static 
+certbot-renew.timer disabled
+chrony-dnssrv@.timer disabled
+fstrim.timer disabled
+systemd-readahead-done.timer indirect
+systemd-tmpfiles-clean.timer static 
+
+241 unit files listed.
+[all]
+ UNIT LOAD ACTIVE SUB 
+ proc-sys-fs-binfmt_misc.automount loaded active waiting Arbitrary Executable File Formats File System Automount Point
+ dev-cdrom.device loaded active plugged QEMU_DVD-ROM
+ dev-disk-by\x2did-ata\x2dQEMU_DVD\x2dROM_QM00003.device loaded active plugged QEMU_DVD-ROM
+ dev-disk-by\x2dlabel-ephemeral0.device loaded active plugged /dev/disk/by-label/ephemeral0
+ dev-disk-by\x2dpath-pci\x2d0000:00:01.1\x2data\x2d2.0.device loaded active plugged QEMU_DVD-ROM
+ dev-disk-by\x2dpath-pci\x2d0000:00:05.0.device loaded active plugged /dev/disk/by-path/pci-0000:00:05.0
+ dev-disk-by\x2dpath-pci\x2d0000:00:05.0\x2dpart1.device loaded active plugged /dev/disk/by-path/pci-0000:00:05.0-part1
+ dev-disk-by\x2dpath-pci\x2d0000:00:05.0\x2dpart2.device loaded active plugged /dev/disk/by-path/pci-0000:00:05.0-part2
+ dev-disk-by\x2dpath-pci\x2d0000:00:05.0\x2dpart3.device loaded active plugged /dev/disk/by-path/pci-0000:00:05.0-part3
+ dev-disk-by\x2dpath-pci\x2d0000:00:06.0.device loaded active plugged /dev/disk/by-path/pci-0000:00:06.0
+ dev-disk-by\x2dpath-virtio\x2dpci\x2d0000:00:05.0.device loaded active plugged /dev/disk/by-path/virtio-pci-0000:00:05.0
+ dev-disk-by\x2dpath-virtio\x2dpci\x2d0000:00:05.0\x2dpart1.device loaded active plugged /dev/disk/by-path/virtio-pci-0000:00:05.0-part1
+ dev-disk-by\x2dpath-virtio\x2dpci\x2d0000:00:05.0\x2dpart2.device loaded active plugged /dev/disk/by-path/virtio-pci-0000:00:05.0-part2
+ dev-disk-by\x2dpath-virtio\x2dpci\x2d0000:00:05.0\x2dpart3.device loaded active plugged /dev/disk/by-path/virtio-pci-0000:00:05.0-part3
+ dev-disk-by\x2dpath-virtio\x2dpci\x2d0000:00:06.0.device loaded active plugged /dev/disk/by-path/virtio-pci-0000:00:06.0
+ dev-disk-by\x2duuid-02199775\x2d8507\x2d4fc5\x2db428\x2db142370a7a49.device loaded active plugged /dev/disk/by-uuid/02199775-8507-4fc5-b428-b142370a7a49
+ dev-disk-by\x2duuid-23388827\x2dc591\x2d487d\x2d93ef\x2dde609ba18656.device loaded active plugged /dev/disk/by-uuid/23388827-c591-487d-93ef-de609ba18656
+ dev-disk-by\x2duuid-67ed246f\x2d38c9\x2d4f75\x2dbb70\x2d8c008e7bf0da.device loaded active plugged /dev/disk/by-uuid/67ed246f-38c9-4f75-bb70-8c008e7bf0da
+ dev-disk-by\x2duuid-f354bb44\x2d9911\x2d4beb\x2da7bd\x2d886fa07273f3.device loaded active plugged /dev/disk/by-uuid/f354bb44-9911-4beb-a7bd-886fa07273f3
+ dev-sr0.device loaded active plugged QEMU_DVD-ROM
+ dev-ttyS0.device loaded active plugged /dev/ttyS0
+ dev-ttyS1.device loaded active plugged /dev/ttyS1
+ dev-ttyS2.device loaded active plugged /dev/ttyS2
+ dev-ttyS3.device loaded active plugged /dev/ttyS3
+ dev-vda.device loaded active plugged /dev/vda
+ dev-vda1.device loaded active plugged /dev/vda1
+ dev-vda2.device loaded active plugged /dev/vda2
+ dev-vda3.device loaded active plugged /dev/vda3
+ dev-vdb.device loaded active plugged /dev/vdb
+ sys-devices-pci0000:00-0000:00:01.1-ata2-host1-target1:0:0-1:0:0:0-block-sr0.device loaded active plugged QEMU_DVD-ROM
+ sys-devices-pci0000:00-0000:00:03.0-virtio0-net-net0.device loaded active plugged Virtio network device
+ sys-devices-pci0000:00-0000:00:04.0-virtio1-net-net1.device loaded active plugged Virtio network device
+ sys-devices-pci0000:00-0000:00:05.0-virtio2-block-vda-vda1.device loaded active plugged /sys/devices/pci0000:00/0000:00:05.0/virtio2/block/vda/vda1
+ sys-devices-pci0000:00-0000:00:05.0-virtio2-block-vda-vda2.device loaded active plugged /sys/devices/pci0000:00/0000:00:05.0/virtio2/block/vda/vda2
+ sys-devices-pci0000:00-0000:00:05.0-virtio2-block-vda-vda3.device loaded active plugged /sys/devices/pci0000:00/0000:00:05.0/virtio2/block/vda/vda3
+ sys-devices-pci0000:00-0000:00:05.0-virtio2-block-vda.device loaded active plugged /sys/devices/pci0000:00/0000:00:05.0/virtio2/block/vda
+ sys-devices-pci0000:00-0000:00:06.0-virtio3-block-vdb.device loaded active plugged /sys/devices/pci0000:00/0000:00:06.0/virtio3/block/vdb
+ sys-devices-platform-serial8250-tty-ttyS2.device loaded active plugged /sys/devices/platform/serial8250/tty/ttyS2
+ sys-devices-platform-serial8250-tty-ttyS3.device loaded active plugged /sys/devices/platform/serial8250/tty/ttyS3
+ sys-devices-pnp0-00:04-tty-ttyS0.device loaded active plugged /sys/devices/pnp0/00:04/tty/ttyS0
+ sys-devices-pnp0-00:05-tty-ttyS1.device loaded active plugged /sys/devices/pnp0/00:05/tty/ttyS1
+ sys-module-configfs.device loaded active plugged /sys/module/configfs
+ sys-subsystem-net-devices-net0.device loaded active plugged Virtio network device
+ sys-subsystem-net-devices-net1.device loaded active plugged Virtio network device
+ -.mount loaded active mounted /
+ boot.mount loaded active mounted /boot
+ dev-hugepages.mount loaded active mounted Huge Pages File System
+ dev-mqueue.mount loaded active mounted POSIX Message Queue File System
+ opt-omd-sites-demo-tmp.mount loaded active mounted /opt/omd/sites/demo/tmp
+ opt.mount loaded active mounted /opt
+ proc-sys-fs-binfmt_misc.mount loaded inactive dead Arbitrary Executable File Formats File System
+ run-user-0.mount loaded active mounted /run/user/0
+ run-user-1000.mount loaded active mounted /run/user/1000
+ run-user-1002.mount loaded active mounted /run/user/1002
+ sys-fs-fuse-connections.mount loaded inactive dead FUSE Control File System
+ sys-kernel-config.mount loaded active mounted Configuration File System
+ sys-kernel-debug.mount loaded active mounted Debug File System
+* sysroot.mount not-found inactive dead sysroot.mount
+ tmp.mount loaded inactive dead Temporary Directory
+ systemd-ask-password-console.path loaded active waiting Dispatch Password Requests to Console Directory Watch
+ systemd-ask-password-wall.path loaded active waiting Forward Password Requests to Wall Directory Watch
+ session-1335225.scope loaded active abandoned Session 1335225 of user root
+ session-1345891.scope loaded active abandoned Session 1345891 of user root
+ session-1349900.scope loaded active running Session 1349900 of user mpana
+ session-1350085.scope loaded active running Session 1350085 of user rundeck
+ acpid.service loaded active running ACPI Event Daemon
+ auditd.service loaded active running Security Auditing Service
+ chronyd.service loaded active running NTP client/server
+ cloud-config.service loaded active exited Apply the settings specified in cloud-config
+ cloud-final.service loaded active exited Execute cloud user/final scripts
+ cloud-init-local.service loaded active exited Initial cloud-init job (pre-networking)
+ cloud-init.service loaded active exited Initial cloud-init job (metadata service crawler)
+ cpupower.service loaded inactive dead Configure CPU power related settings
+ crond.service loaded active running Command Scheduler
+ dbus.service loaded active running D-Bus System Message Bus
+* display-manager.service not-found inactive dead display-manager.service
+ dracut-cmdline.service loaded inactive dead dracut cmdline hook
+ dracut-initqueue.service loaded inactive dead dracut initqueue hook
+ dracut-mount.service loaded inactive dead dracut mount hook
+ dracut-pre-mount.service loaded inactive dead dracut pre-mount hook
+ dracut-pre-pivot.service loaded inactive dead dracut pre-pivot and cleanup hook
+ dracut-pre-trigger.service loaded inactive dead dracut pre-trigger hook
+ dracut-pre-udev.service loaded inactive dead dracut pre-udev hook
+ dracut-shutdown.service loaded inactive dead Restore /run/initramfs
+ emergency.service loaded inactive dead Emergency Shell
+* exim.service not-found inactive dead exim.service
+ getty@tty1.service loaded active running Getty on tty1
+ httpd.service loaded active running The Apache HTTP Server
+ initrd-cleanup.service loaded inactive dead Cleaning Up and Shutting Down Daemons
+ initrd-parse-etc.service loaded inactive dead Reload Configuration from the Real Root
+ initrd-switch-root.service loaded inactive dead Switch Root
+ initrd-udevadm-cleanup-db.service loaded inactive dead Cleanup udevd DB
+* ip6tables.service not-found inactive dead ip6tables.service
+* iptables.service not-found inactive dead iptables.service
+ irqbalance.service loaded active running irqbalance daemon
+ kmod-static-nodes.service loaded active exited Create list of required static device nodes for the current kernel
+ lm_sensors.service loaded inactive dead Initialize hardware monitoring sensors
+ network.service loaded active exited LSB: Bring up/down networking
+* NetworkManager-wait-online.service not-found inactive dead NetworkManager-wait-online.service
+* NetworkManager.service not-found inactive dead NetworkManager.service
+ ntpd.service loaded inactive dead Network Time Service
+ ntpdate.service loaded active exited Set time via NTP
+ omd.service loaded active exited Checkmk Monitoring
+* plymouth-quit-wait.service not-found inactive dead plymouth-quit-wait.service
+* plymouth-start.service not-found inactive dead plymouth-start.service
+ polkit.service loaded active running Authorization Manager
+ postfix.service loaded inactive dead Postfix Mail Transport Agent
+ rc-local.service loaded inactive dead /etc/rc.d/rc.local Compatibility
+ rescue.service loaded inactive dead Rescue Shell
+ rhel-autorelabel.service loaded inactive dead Relabel all filesystems, if necessary
+ rhel-configure.service loaded inactive dead Reconfigure the system on administrator request
+ rhel-dmesg.service loaded active exited Dump dmesg to /var/log/dmesg
+ rhel-domainname.service loaded active exited Read and set NIS domainname from /etc/sysconfig/network
+ rhel-import-state.service loaded active exited Import network configuration from initramfs
+ rhel-loadmodules.service loaded inactive dead Load legacy module configuration
+ rhel-readonly.service loaded active exited Configure read-only root support
+ rpcbind.service loaded active running RPC bind service
+ rsyslog.service loaded active running System Logging Service
+ selinux-policy-migrate-local-changes@targeted.service loaded inactive dead Migrate local SELinux policy changes from the old store structure to the new structure
+* sendmail.service not-found inactive dead sendmail.service
+ serial-getty@ttyS0.service loaded active running Serial Getty on ttyS0
+ snmpd.service loaded active running Simple Network Management Protocol (SNMP) Daemon.
+* sntp.service not-found inactive dead sntp.service
+ sshd-keygen.service loaded inactive dead OpenSSH Server Key Generation
+ sshd.service loaded active running OpenSSH server daemon
+* syslog.service not-found inactive dead syslog.service
+ systemd-ask-password-console.service loaded inactive dead Dispatch Password Requests to Console
+ systemd-ask-password-wall.service loaded inactive dead Forward Password Requests to Wall
+ systemd-binfmt.service loaded inactive dead Set Up Additional Binary Formats
+ systemd-firstboot.service loaded inactive dead First Boot Wizard
+ systemd-fsck-root.service loaded inactive dead File System Check on Root Device
+ systemd-fsck@dev-vdb.service loaded active exited File System Check on /dev/vdb
+ systemd-hwdb-update.service loaded inactive dead Rebuild Hardware Database
+ systemd-initctl.service loaded inactive dead /dev/initctl Compatibility Daemon
+ systemd-journal-catalog-update.service loaded inactive dead Rebuild Journal Catalog
+ systemd-journal-flush.service loaded active exited Flush Journal to Persistent Storage
+ systemd-journald.service loaded active running Journal Service
+ systemd-logind.service loaded active running Login Service
+ systemd-machine-id-commit.service loaded inactive dead Commit a transient machine-id on disk
+ systemd-modules-load.service loaded inactive dead Load Kernel Modules
+ systemd-random-seed.service loaded active exited Load/Save Random Seed
+ systemd-readahead-collect.service loaded inactive dead Collect Read-Ahead Data
+ systemd-readahead-done.service loaded inactive dead Stop Read-Ahead Data Collection
+ systemd-readahead-replay.service loaded inactive dead Replay Read-Ahead Data
+ systemd-reboot.service loaded inactive dead Reboot
+ systemd-remount-fs.service loaded active exited Remount Root and Kernel File Systems
+ systemd-shutdownd.service loaded inactive dead Delayed Shutdown Service
+ systemd-sysctl.service loaded active exited Apply Kernel Variables
+* systemd-sysusers.service not-found inactive dead systemd-sysusers.service
+* systemd-timesyncd.service not-found inactive dead systemd-timesyncd.service
+ systemd-tmpfiles-clean.service loaded inactive dead Cleanup of Temporary Directories
+ systemd-tmpfiles-setup-dev.service loaded active exited Create Static Device Nodes in /dev
+ systemd-tmpfiles-setup.service loaded active exited Create Volatile Files and Directories
+ systemd-udev-trigger.service loaded active exited udev Coldplug all Devices
+ systemd-udevd.service loaded active running udev Kernel Device Manager
+ systemd-update-done.service loaded inactive dead Update is Completed
+ systemd-update-utmp-runlevel.service loaded inactive dead Update UTMP about System Runlevel Changes
+ systemd-update-utmp.service loaded active exited Update UTMP about System Boot/Shutdown
+ systemd-user-sessions.service loaded active exited Permit User Sessions
+ systemd-vconsole-setup.service loaded active exited Setup Virtual Console
+ tuned.service loaded active running Dynamic System Tuning Daemon
+ xinetd.service loaded active running Xinetd A Powerful Replacement For Inetd
+* ypbind.service not-found inactive dead ypbind.service
+* yppasswdd.service not-found inactive dead yppasswdd.service
+* ypserv.service not-found inactive dead ypserv.service
+* ypxfrd.service not-found inactive dead ypxfrd.service
+ yum-cron.service loaded active exited Run automatic yum updates as a cron job
+ -.slice loaded active active Root Slice
+ system-check\x2dmk\x2dagent.slice loaded active active system-check\x2dmk\x2dagent.slice
+ system-getty.slice loaded active active system-getty.slice
+ system-selinux\x2dpolicy\x2dmigrate\x2dlocal\x2dchanges.slice loaded active active system-selinux\x2dpolicy\x2dmigrate\x2dlocal\x2dchanges.slice
+ system-serial\x2dgetty.slice loaded active active system-serial\x2dgetty.slice
+ system-systemd\x2dfsck.slice loaded active active system-systemd\x2dfsck.slice
+ system.slice loaded active active System Slice
+ user-0.slice loaded active active User Slice of root
+ user-1000.slice loaded active active User Slice of mpana
+ user-1002.slice loaded active active User Slice of rundeck
+ user.slice loaded active active User and Session Slice
+ dbus.socket loaded active running D-Bus System Message Bus Socket
+ rpcbind.socket loaded active running RPCbind Server Activation Socket
+ sshd.socket loaded inactive dead OpenSSH Server Socket
+ syslog.socket loaded inactive dead Syslog Socket
+ systemd-initctl.socket loaded active listening /dev/initctl Compatibility Named Pipe
+ systemd-journald.socket loaded active running Journal Socket
+ systemd-shutdownd.socket loaded active listening Delayed Shutdown Socket
+ systemd-udevd-control.socket loaded active running udev Control Socket
+ systemd-udevd-kernel.socket loaded active running udev Kernel Socket
+ dev-disk-by\x2dpath-pci\x2d0000:00:05.0\x2dpart2.swap loaded active active /dev/disk/by-path/pci-0000:00:05.0-part2
+ dev-disk-by\x2dpath-virtio\x2dpci\x2d0000:00:05.0\x2dpart2.swap loaded active active /dev/disk/by-path/virtio-pci-0000:00:05.0-part2
+ dev-disk-by\x2duuid-f354bb44\x2d9911\x2d4beb\x2da7bd\x2d886fa07273f3.swap loaded active active /dev/disk/by-uuid/f354bb44-9911-4beb-a7bd-886fa07273f3
+ dev-vda2.swap loaded active active /dev/vda2
+ basic.target loaded active active Basic System
+ cloud-config.target loaded active active Cloud-config availability
+ cloud-init.target loaded active active Cloud-init target
+ cryptsetup.target loaded active active Local Encrypted Volumes
+ emergency.target loaded inactive dead Emergency Mode
+ final.target loaded inactive dead Final Step
+* firewalld.target not-found inactive dead firewalld.target
+ getty-pre.target loaded inactive dead Login Prompts (Pre)
+ getty.target loaded active active Login Prompts
+ graphical.target loaded inactive dead Graphical Interface
+ initrd-fs.target loaded inactive dead Initrd File Systems
+ initrd-root-fs.target loaded inactive dead Initrd Root File System
+ initrd-switch-root.target loaded inactive dead Switch Root
+ initrd.target loaded inactive dead Initrd Default Target
+ local-fs-pre.target loaded active active Local File Systems (Pre)
+ local-fs.target loaded active active Local File Systems
+ multi-user.target loaded active active Multi-User System
+ network-online.target loaded active active Network is Online
+ network-pre.target loaded active active Network (Pre)
+ network.target loaded active active Network
+ nss-lookup.target loaded inactive dead Host and Network Name Lookups
+ nss-user-lookup.target loaded inactive dead User and Group Name Lookups
+ paths.target loaded active active Paths
+ remote-fs-pre.target loaded inactive dead Remote File Systems (Pre)
+ remote-fs.target loaded active active Remote File Systems
+ rescue.target loaded inactive dead Rescue Mode
+ rpcbind.target loaded active active RPC Port Mapper
+ shutdown.target loaded inactive dead Shutdown
+ slices.target loaded active active Slices
+ sockets.target loaded active active Sockets
+ swap.target loaded active active Swap
+ sysinit.target loaded active active System Initialization
+* syslog.target not-found inactive dead syslog.target
+ time-sync.target loaded active active System Time Synchronized
+ timers.target loaded active active Timers
+ umount.target loaded inactive dead Unmount All Filesystems
+ systemd-readahead-done.timer loaded inactive dead Stop Read-Ahead Data Collection 10s After Completed Startup
+ systemd-tmpfiles-clean.timer loaded active waiting Daily Cleanup of Temporary Directories
+
+<<<nfsmounts>>>
+<<<cifsmounts>>>
+<<<mounts>>>
+/dev/vda3 / xfs rw,relatime,attr2,inode64,noquota 0 0
+/dev/vda1 /boot xfs rw,relatime,attr2,inode64,noquota 0 0
+/dev/vdb /opt ext4 rw,relatime,data=ordered 0 0
+<<<ps_lnx>>>
+[header] CGROUP USER VSZ RSS TIME ELAPSED PID COMMAND
+- root 191068 3976 06:56:56 146-00:04:24 1 /usr/lib/systemd/systemd --system --deserialize 19
+- root 0 0 00:00:01 146-00:04:24 2 [kthreadd]
+- root 0 0 00:00:00 146-00:04:24 4 [kworker/0:0H]
+- root 0 0 00:06:15 146-00:04:24 6 [ksoftirqd/0]
+- root 0 0 00:07:23 146-00:04:24 7 [migration/0]
+- root 0 0 00:00:00 146-00:04:24 8 [rcu_bh]
+- root 0 0 03:48:25 146-00:04:24 9 [rcu_sched]
+- root 0 0 00:00:00 146-00:04:24 10 [lru-add-drain]
+- root 0 0 00:00:57 146-00:04:24 11 [watchdog/0]
+- root 0 0 00:01:00 146-00:04:24 12 [watchdog/1]
+- root 0 0 00:07:06 146-00:04:24 13 [migration/1]
+- root 0 0 00:05:43 146-00:04:24 14 [ksoftirqd/1]
+- root 0 0 00:00:00 146-00:04:24 16 [kworker/1:0H]
+- root 0 0 00:00:00 146-00:04:24 18 [kdevtmpfs]
+- root 0 0 00:00:00 146-00:04:24 19 [netns]
+- root 0 0 00:00:05 146-00:04:24 20 [khungtaskd]
+- root 0 0 00:00:00 146-00:04:24 21 [writeback]
+- root 0 0 00:00:00 146-00:04:24 22 [kintegrityd]
+- root 0 0 00:00:00 146-00:04:24 23 [bioset]
+- root 0 0 00:00:00 146-00:04:24 24 [bioset]
+- root 0 0 00:00:00 146-00:04:24 25 [bioset]
+- root 0 0 00:00:00 146-00:04:24 26 [kblockd]
+- root 0 0 00:00:00 146-00:04:24 27 [md]
+- root 0 0 00:00:00 146-00:04:24 28 [edac-poller]
+- root 0 0 00:00:00 146-00:04:24 29 [watchdogd]
+- root 0 0 00:01:06 146-00:04:24 36 [kswapd0]
+- root 0 0 00:00:00 146-00:04:24 37 [ksmd]
+- root 0 0 00:00:58 146-00:04:24 38 [khugepaged]
+- root 0 0 00:00:00 146-00:04:24 39 [crypto]
+- root 0 0 00:00:00 146-00:04:24 47 [kthrotld]
+- root 0 0 00:00:00 146-00:04:24 49 [kmpath_rdacd]
+- root 0 0 00:00:00 146-00:04:24 50 [kaluad]
+- root 0 0 00:00:00 146-00:04:24 51 [kpsmoused]
+- root 0 0 00:00:00 146-00:04:24 52 [ipv6_addrconf]
+- root 0 0 00:00:00 146-00:04:24 65 [deferwq]
+- root 0 0 00:02:05 146-00:04:24 101 [kauditd]
+- root 0 0 00:00:00 146-00:04:24 233 [ata_sff]
+- root 0 0 00:00:00 146-00:04:24 234 [scsi_eh_0]
+- root 0 0 00:00:00 146-00:04:24 235 [scsi_tmf_0]
+- root 0 0 00:00:00 146-00:04:24 236 [scsi_eh_1]
+- root 0 0 00:00:00 146-00:04:24 237 [scsi_tmf_1]
+- root 0 0 00:04:06 146-00:04:24 241 [kworker/0:1H]
+- root 0 0 00:04:44 146-00:04:23 255 [kworker/1:1H]
+- root 0 0 00:00:00 146-00:04:23 261 [bioset]
+- root 0 0 00:00:00 146-00:04:23 262 [xfsalloc]
+- root 0 0 00:00:00 146-00:04:23 263 [xfs_mru_cache]
+- root 0 0 00:00:00 146-00:04:23 264 [xfs-buf/vda3]
+- root 0 0 00:00:00 146-00:04:23 265 [xfs-data/vda3]
+- root 0 0 00:00:00 146-00:04:23 266 [xfs-conv/vda3]
+- root 0 0 00:00:00 146-00:04:23 267 [xfs-cil/vda3]
+- root 0 0 00:00:00 146-00:04:23 268 [xfs-reclaim/vda]
+- root 0 0 00:00:00 146-00:04:23 269 [xfs-log/vda3]
+- root 0 0 00:00:00 146-00:04:23 270 [xfs-eofblocks/v]
+- root 0 0 00:44:59 146-00:04:23 271 [xfsaild/vda3]
+1:name=systemd:/system.slice/systemd-journald.service root 56536 20632 00:36:20 146-00:04:22 369 /usr/lib/systemd/systemd-journald
+- root 0 0 00:00:00 146-00:04:22 445 [xfs-buf/vda1]
+- root 0 0 00:00:00 146-00:04:22 446 [xfs-data/vda1]
+- root 0 0 00:00:00 146-00:04:22 447 [xfs-conv/vda1]
+- root 0 0 00:00:00 146-00:04:22 448 [xfs-cil/vda1]
+- root 0 0 00:00:00 146-00:04:22 449 [xfs-reclaim/vda]
+- root 0 0 00:00:00 146-00:04:22 450 [xfs-log/vda1]
+- root 0 0 00:00:00 146-00:04:22 451 [xfs-eofblocks/v]
+- root 0 0 00:00:00 146-00:04:22 452 [xfsaild/vda1]
+- root 0 0 00:00:00 146-00:04:22 459 [ttm_swap]
+- root 0 0 00:00:00 146-00:04:22 483 [nfit]
+- root 0 0 00:07:08 146-00:04:22 501 [jbd2/vdb-8]
+- root 0 0 00:00:00 146-00:04:22 502 [ext4-rsv-conver]
+1:name=systemd:/system.slice/auditd.service root 55532 556 00:08:03 146-00:04:22 504 /sbin/auditd
+1:name=systemd:/system.slice/rpcbind.service rpc 69320 692 00:00:19 146-00:04:22 532 /sbin/rpcbind -w
+1:name=systemd:/system.slice/systemd-logind.service root 27220 2016 00:37:58 146-00:04:22 534 /usr/lib/systemd/systemd-logind
+1:name=systemd:/system.slice/irqbalance.service root 21608 612 00:04:44 146-00:04:22 535 /usr/sbin/irqbalance --foreground
+1:name=systemd:/system.slice/dbus.service dbus 58416 1732 01:06:17 146-00:04:22 538 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+1:name=systemd:/system.slice/acpid.service root 4388 284 00:00:00 146-00:04:22 560 /usr/sbin/acpid
+1:name=systemd:/system.slice/snmpd.service root 228896 3988 01:11:31 146-00:04:11 1106 /usr/sbin/snmpd -LS0-6d -f
+1:name=systemd:/system.slice/rsyslog.service root 598564 14780 00:25:53 146-00:04:11 1107 /usr/sbin/rsyslogd -n
+1:name=systemd:/system.slice/system-serial\x2dgetty.slice/serial-getty@ttyS0.service root 110204 352 00:00:00 146-00:04:11 1109 /sbin/agetty --keep-baud 115200,38400,9600 ttyS0 vt220
+1:name=systemd:/system.slice/system-getty.slice/getty@tty1.service root 110204 360 00:00:00 146-00:04:11 1110 /sbin/agetty --noclear tty1 linux
+1:name=systemd:/system.slice/chronyd.service chrony 100496 1108 00:00:41 146-00:04:09 1161 /usr/sbin/chronyd
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 99576 1980 00:00:00 10:31:39 1265 /usr/sbin/httpd -f /omd/sites/demo/etc/apache/apache.conf
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 444692 170080 00:00:29 10:31:39 1266 /usr/sbin/httpd -f /omd/sites/demo/etc/apache/apache.conf
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 445264 170452 00:00:28 10:30:41 1717 /usr/sbin/httpd -f /omd/sites/demo/etc/apache/apache.conf
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 1207232 12832 00:00:57 22:13:07 2772 /omd/sites/demo/bin/cmc /omd/sites/demo/var/check_mk/core/config
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 317884 92700 00:00:01 22:13:07 2796 python3 /omd/sites/demo/bin/cmk --create-rrd --keepalive
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 232416 83916 00:00:06 22:13:07 2798 python3 /omd/sites/demo/bin/cmk --handle-alerts --keepalive
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 10992 1020 00:00:00 22:13:07 2799 /omd/sites/demo/lib/cmc/checkhelper
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 10988 784 00:00:00 22:13:07 2800 /omd/sites/demo/lib/cmc/checkhelper
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 10988 784 00:00:00 22:13:07 2801 /omd/sites/demo/lib/cmc/checkhelper
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 10988 784 00:00:00 22:13:07 2802 /omd/sites/demo/lib/cmc/checkhelper
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 10988 788 00:00:00 22:13:07 2803 /omd/sites/demo/lib/cmc/checkhelper
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 237768 89516 00:02:35 22:13:07 2804 python3 /omd/sites/demo/bin/cmk --checker
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 234256 85736 00:00:01 22:13:07 2805 python3 /omd/sites/demo/bin/cmk --checker
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 231776 83344 00:00:01 22:13:07 2806 python3 /omd/sites/demo/bin/cmk --checker
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 232032 83348 00:00:01 22:13:07 2807 python3 /omd/sites/demo/bin/cmk --checker
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 232456 83664 00:00:01 22:13:07 2808 python3 /omd/sites/demo/bin/cmk --keepalive --real-time-checks
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 178644 40588 00:04:48 22:13:06 2809 python3 /omd/sites/demo/bin/fetcher
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 178300 40272 00:00:12 22:13:06 2810 python3 /omd/sites/demo/bin/fetcher
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 171584 33480 00:00:00 22:13:06 2811 python3 /omd/sites/demo/bin/fetcher
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 167868 29584 00:00:00 22:13:06 2812 python3 /omd/sites/demo/bin/fetcher
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 167868 29588 00:00:00 22:13:06 2813 python3 /omd/sites/demo/bin/fetcher
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 167868 29584 00:00:00 22:13:06 2814 python3 /omd/sites/demo/bin/fetcher
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 167868 29588 00:00:00 22:13:06 2815 python3 /omd/sites/demo/bin/fetcher
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 167868 29588 00:00:00 22:13:06 2816 python3 /omd/sites/demo/bin/fetcher
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 167868 29584 00:00:00 22:13:06 2817 python3 /omd/sites/demo/bin/fetcher
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 167868 29584 00:00:00 22:13:06 2818 python3 /omd/sites/demo/bin/fetcher
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 167868 29588 00:00:00 22:13:06 2819 python3 /omd/sites/demo/bin/fetcher
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 167868 29588 00:00:00 22:13:06 2820 python3 /omd/sites/demo/bin/fetcher
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 167868 29584 00:00:00 22:13:06 2821 python3 /omd/sites/demo/bin/fetcher
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 233712 85136 00:00:05 22:13:06 2822 python3 /omd/sites/demo/bin/cmk --notify --keepalive
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 13060 824 00:00:01 22:13:06 2823 /omd/sites/demo/lib/cmc/icmpsender 8 0 1000
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 15236 3128 00:00:03 22:13:06 2824 /omd/sites/demo/lib/cmc/icmpreceiver
+1:name=systemd:/user.slice/user-0.slice/session-1345891.scope demo 148844 12740 00:00:32 20:28:33 4666 python3 /omd/sites/demo/bin/mknotifyd
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 151928 15544 00:01:13 20:28:33 4681 python3 /omd/sites/demo/bin/liveproxyd
+1:name=systemd:/user.slice/user-0.slice/session-1345891.scope demo 626464 2792 00:00:13 20:28:32 4697 /omd/sites/demo/bin/rrdcached -t 4 -w 3600 -z 1800 -f 7200 -s demo -m 660 -l unix:/omd/sites/demo/tmp/run/rrdcached.sock -p /omd/sites/demo/tmp/rrdcached.pid -j /omd/sites/demo/var/rrdcached -o /omd/sites/demo/var/log/rrdcached.log
+1:name=systemd:/user.slice/user-0.slice/session-1345891.scope demo 64504 8920 00:03:15 20:28:32 4765 /omd/sites/demo/bin/redis-server *:0
+1:name=systemd:/system.slice/systemd-udevd.service root 45292 1724 00:00:00 23:10:56 5362 /usr/lib/systemd/systemd-udevd
+1:name=systemd:/system.slice/sshd.service root 112984 4368 00:00:01 23:10:39 5974 /usr/sbin/sshd -D
+1:name=systemd:/system.slice/polkit.service polkitd 612348 10252 00:00:06 23:10:38 6007 /usr/lib/polkit-1/polkitd --no-debug
+1:name=systemd:/system.slice/crond.service root 126416 1640 00:00:00 23:10:37 6046 /usr/sbin/crond -n
+1:name=systemd:/system.slice/tuned.service root 574280 17452 00:00:09 23:10:32 6251 /usr/bin/python2 -Es /usr/sbin/tuned -l -P
+1:name=systemd:/system.slice/httpd.service apache 413644 9772 00:00:00 25:36 7701 /usr/sbin/httpd -DFOREGROUND
+1:name=systemd:/system.slice/httpd.service apache 413780 10236 00:00:00 01:58:16 8802 /usr/sbin/httpd -DFOREGROUND
+- root 0 0 00:00:00 17:42 10192 [kworker/u4:1]
+1:name=systemd:/system.slice/httpd.service apache 413384 9792 00:00:00 16:51 10466 /usr/sbin/httpd -DFOREGROUND
+1:name=systemd:/system.slice/httpd.service apache 413656 9772 00:00:00 16:04 10831 /usr/sbin/httpd -DFOREGROUND
+1:name=systemd:/system.slice/httpd.service apache 413384 9508 00:00:00 15:17 11022 /usr/sbin/httpd -DFOREGROUND
+- root 0 0 00:00:00 14:37 11331 [kworker/0:0]
+- root 0 0 00:00:00 12:14 11936 [kworker/1:1]
+- root 0 0 00:00:00 03:29:11 12079 [kworker/u4:2]
+- root 0 0 00:00:00 09:36 12857 [kworker/0:1]
+- root 0 0 00:00:00 07:13 13462 [kworker/1:0]
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 337728 19480 00:00:00 04:50 14097 /usr/bin/php-cgi -d session.save_handler=files -d session.save_path=/omd/sites/demo/tmp/php/session -d upload_tmp_dir=/omd/sites/demo/tmp/php/upload -d soap.wsdl_cache_dir=/omd/sites/demo/tmp/php/wsdl-cache -d safe_mode=Off -d mysql.default_socket=/omd/sites/demo/tmp/run/mysqld/mysqld.sock
+1:name=systemd:/system.slice/httpd.service apache 414060 9512 00:00:00 04:37 14421 /usr/sbin/httpd -DFOREGROUND
+- root 0 0 00:00:00 04:35 14422 [kworker/0:2]
+- root 0 0 00:00:00 02:12 15037 [kworker/1:2]
+1:name=systemd:/user.slice/user-1002.slice/session-1350085.scope root 158984 5700 00:00:00 00:39 15406 sshd: rundeck [priv]
+1:name=systemd:/user.slice/user-1002.slice/session-1350085.scope rundeck 159296 2732 00:00:00 00:39 15408 sshd: rundeck@notty
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 445264 160220 00:00:00 00:02 15793 /usr/sbin/httpd -f /omd/sites/demo/etc/apache/apache.conf
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 233040 84384 00:00:01 00:02 15795 python3 /omd/sites/demo/bin/check_mk --automation get-agent-output sc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra agent
+1:name=systemd:/system.slice/xinetd.service root 115804 2056 00:00:00 00:01 15797 /bin/bash /usr/bin/check_mk_agent
+1:name=systemd:/system.slice/xinetd.service root 115936 1460 00:00:00 00:00 15812 /bin/bash /usr/bin/check_mk_agent
+1:name=systemd:/system.slice/xinetd.service root 115804 848 00:00:00 00:00 15813 /bin/bash /usr/bin/check_mk_agent
+1:name=systemd:/system.slice/xinetd.service root 4384 360 00:00:00 00:00 15814 cat
+1:name=systemd:/system.slice/xinetd.service root 115936 1080 00:00:00 00:00 15840 /bin/bash /usr/bin/check_mk_agent
+1:name=systemd:/system.slice/xinetd.service root 51732 1704 00:00:00 00:00 15841 ps ax -o cgroup:512,user:32,vsz,rss,cputime,etime,pid,command --columns 10000
+1:name=systemd:/system.slice/xinetd.service root 4392 360 00:00:00 00:00 15842 tr -s 
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 307796 23664 00:03:32 4-02:22:43 16841 python3 /omd/sites/demo/bin/mkeventd
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 99576 5140 00:00:12 4-02:22:39 16994 /usr/sbin/httpd -f /omd/sites/demo/etc/apache/apache.conf
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 231168 19576 00:01:31 4-02:22:37 17021 python3 /omd/sites/demo/bin/dcd
+1:name=systemd:/system.slice/xinetd.service root 27168 1120 00:00:00 1-20:40:15 19347 /usr/sbin/xinetd -stayalive -pidfile /var/run/xinetd.pid
+1:name=systemd:/system.slice/httpd.service apache 414052 10036 00:00:00 01:16:32 23391 /usr/sbin/httpd -DFOREGROUND
+1:name=systemd:/system.slice/httpd.service apache 413920 10356 00:00:00 19:30:02 23402 /usr/sbin/httpd -DFOREGROUND
+1:name=systemd:/system.slice/httpd.service apache 414044 10276 00:00:00 01:14:33 24197 /usr/sbin/httpd -DFOREGROUND
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 423352 148512 00:00:08 01:14:15 24462 /usr/sbin/httpd -f /omd/sites/demo/etc/apache/apache.conf
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 337336 19052 00:00:00 02:48:42 24916 /usr/bin/php-cgi -d session.save_handler=files -d session.save_path=/omd/sites/demo/tmp/php/session -d upload_tmp_dir=/omd/sites/demo/tmp/php/upload -d soap.wsdl_cache_dir=/omd/sites/demo/tmp/php/wsdl-cache -d safe_mode=Off -d mysql.default_socket=/omd/sites/demo/tmp/run/mysqld/mysqld.sock
+1:name=systemd:/user.slice/user-0.slice/session-1335225.scope demo 422760 147824 00:00:06 01:07:43 26388 /usr/sbin/httpd -f /omd/sites/demo/etc/apache/apache.conf
+1:name=systemd:/system.slice/httpd.service root 413096 15916 00:00:03 20:53:44 28040 /usr/sbin/httpd -DFOREGROUND
+1:name=systemd:/user.slice/user-1000.slice/session-1349900.scope root 158984 5652 00:00:00 55:43 29937 sshd: mpana [priv]
+1:name=systemd:/user.slice/user-1000.slice/session-1349900.scope mpana 159452 2812 00:00:00 55:43 29939 sshd: mpana@pts/0
+1:name=systemd:/user.slice/user-1000.slice/session-1349900.scope mpana 115544 2016 00:00:00 55:43 29940 -bash
+1:name=systemd:/system.slice/httpd.service apache 413648 10024 00:00:00 19:12:37 29964 /usr/sbin/httpd -DFOREGROUND
+1:name=systemd:/user.slice/user-1000.slice/session-1349900.scope root 241380 4604 00:00:00 55:42 29999 sudo -s
+1:name=systemd:/user.slice/user-1000.slice/session-1349900.scope root 115676 2084 00:00:00 55:42 30000 /bin/bash
+1:name=systemd:/user.slice/user-1000.slice/session-1349900.scope root 191852 2296 00:00:00 55:40 30011 su - demo
+1:name=systemd:/user.slice/user-1000.slice/session-1349900.scope demo 115640 2120 00:00:00 55:40 30012 -bash
+<<<mem>>>
+MemTotal:        7751004 kB
+MemFree:          310712 kB
+MemAvailable:    5074832 kB
+Buffers:          292248 kB
+Cached:          4309080 kB
+SwapCached:          384 kB
+Active:          4413888 kB
+Inactive:        1956920 kB
+Active(anon):    2004596 kB
+Inactive(anon):   157680 kB
+Active(file):    2409292 kB
+Inactive(file):  1799240 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       1048572 kB
+SwapFree:        1042036 kB
+Dirty:               164 kB
+Writeback:             0 kB
+AnonPages:       1769412 kB
+Mapped:            60560 kB
+Shmem:            392796 kB
+Slab:             909752 kB
+SReclaimable:     858468 kB
+SUnreclaim:        51284 kB
+KernelStack:        3344 kB
+PageTables:        24368 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     4924072 kB
+Committed_AS:    2850648 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       38584 kB
+VmallocChunk:   34359685116 kB
+Percpu:              352 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     61440 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       81908 kB
+DirectMap2M:     5947392 kB
+DirectMap1G:     2097152 kB
+<<<cpu>>>
+0.03 0.05 0.06 1/212 15848 2
+60396
+<<<uptime>>>
+12614664.13 24261566.26
+<<<lnx_if>>>
+[start_iplink]
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: net0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 90:b8:d0:f1:37:cb brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.3/27 brd 192.168.1.3 scope global net0
+       valid_lft forever preferred_lft forever
+3: net1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 8500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 90:b8:d0:b6:28:4b brd ff:ff:ff:ff:ff:ff
+    inet 192.168.128.55/22 brd 192.168.131.255 scope global net1
+       valid_lft forever preferred_lft forever
+[end_iplink]
+<<<lnx_if:sep(58)>>>
+    lo: 44283312412 116124853    0    0    0     0          0         0 44283312412 116124853    0    0    0     0       0          0
+  net0: 53884468475 572510543    0    4    0     0          0         0 6408717252 37115207    0    0    0     0       0          0
+  net1: 2275502157 5726258    0    0    0     0          0         0 1065224700 7833241    0    0    0     0       0          0
+[lo]
+	Link detected: yes
+	Address: 00:00:00:00:00:00
+
+[net0]
+	Link detected: yes
+	Address: 90:b8:d0:f1:37:cb
+
+[net1]
+	Link detected: yes
+	Address: 90:b8:d0:b6:28:4b
+
+<<<tcp_conn_stats>>>
+01 6
+0A 9
+06 26
+<<<diskstat>>>
+1646303503
+ 253       0 vda 2887291 52709 100116123 3236861 9960928 1602706 630830016 63767730 0 7071214 67004591
+ 253       1 vda1 150 0 16805 556 646 4 64139 4564 0 3467 5120
+ 253       2 vda2 98214 52201 1211112 79120 15603 209672 1802200 410905 0 136642 490025
+ 253       3 vda3 2788887 508 98885086 3157177 9944679 1393030 628963677 63352261 0 6979467 66509438
+ 253      16 vdb 1294032 8638 111262714 4558811 27162135 43062962 710474624 32598085 0 28508436 37156896
+[dmsetup_info]
+No devices found
+<<<kernel>>>
+1646303503
+nr_free_pages 77697
+nr_alloc_batch 1881
+nr_inactive_anon 39420
+nr_active_anon 501182
+nr_inactive_file 449810
+nr_active_file 602323
+nr_unevictable 0
+nr_mlock 0
+nr_anon_pages 426993
+nr_mapped 15140
+nr_file_pages 1150428
+nr_dirty 41
+nr_writeback 0
+nr_slab_reclaimable 214617
+nr_slab_unreclaimable 12821
+nr_page_table_pages 6092
+nr_kernel_stack 209
+nr_unstable 0
+nr_bounce 0
+nr_vmscan_write 269159
+nr_vmscan_immediate_reclaim 10546
+nr_writeback_temp 0
+nr_isolated_anon 0
+nr_isolated_file 0
+nr_shmem 98199
+nr_dirtied 1002831923
+nr_written 107891084
+numa_hit 35586417509
+numa_miss 0
+numa_foreign 0
+numa_interleave 14858
+numa_local 35586417509
+numa_other 0
+workingset_refault 26473931
+workingset_activate 7836996
+workingset_nodereclaim 0
+nr_anon_transparent_hugepages 30
+nr_free_cma 0
+nr_dirty_threshold 323834
+nr_dirty_background_threshold 24415
+pgpgin 105689418
+pgpgout 670652320
+pswpin 150318
+pswpout 225275
+pgalloc_dma 2
+pgalloc_dma32 15741463532
+pgalloc_normal 20750626910
+pgalloc_movable 0
+pgfree 36493065452
+pgactivate 207628799
+pgdeactivate 24356606
+pgfault 81994728873
+pgmajfault 626447
+pglazyfreed 0
+pgrefill_dma 0
+pgrefill_dma32 11903563
+pgrefill_normal 12687342
+pgrefill_movable 0
+pgsteal_kswapd_dma 0
+pgsteal_kswapd_dma32 17931882
+pgsteal_kswapd_normal 18234543
+pgsteal_kswapd_movable 0
+pgsteal_direct_dma 0
+pgsteal_direct_dma32 282621
+pgsteal_direct_normal 184330
+pgsteal_direct_movable 0
+pgscan_kswapd_dma 0
+pgscan_kswapd_dma32 18052842
+pgscan_kswapd_normal 18586903
+pgscan_kswapd_movable 0
+pgscan_direct_dma 0
+pgscan_direct_dma32 283939
+pgscan_direct_normal 186093
+pgscan_direct_movable 0
+pgscan_direct_throttle 0
+zone_reclaim_failed 0
+pginodesteal 0
+slabs_scanned 9735552
+kswapd_inodesteal 0
+kswapd_low_wmark_hit_quickly 5465
+kswapd_high_wmark_hit_quickly 11437
+pageoutrun 21553
+allocstall 9085
+pgrotated 284110
+drop_pagecache 0
+drop_slab 0
+numa_pte_updates 0
+numa_huge_pte_updates 0
+numa_hint_faults 0
+numa_hint_faults_local 0
+numa_pages_migrated 0
+pgmigrate_success 872004
+pgmigrate_fail 1036
+compact_migrate_scanned 1508290
+compact_free_scanned 352314150
+compact_isolated 1804867
+compact_stall 889
+compact_fail 507
+compact_success 382
+htlb_buddy_alloc_success 0
+htlb_buddy_alloc_fail 0
+unevictable_pgs_culled 0
+unevictable_pgs_scanned 0
+unevictable_pgs_rescued 0
+unevictable_pgs_mlocked 0
+unevictable_pgs_munlocked 0
+unevictable_pgs_cleared 0
+unevictable_pgs_stranded 0
+thp_fault_alloc 126353
+thp_fault_fallback 1321706
+thp_collapse_alloc 5595
+thp_collapse_alloc_failed 273209
+thp_split 3449
+thp_zero_page_alloc 5
+thp_zero_page_alloc_failed 0
+balloon_inflate 0
+balloon_deflate 0
+balloon_migrate 0
+swap_ra 56787
+swap_ra_hit 52836
+cpu  31798421 23655 25369248 2406463194 705098 0 515621 0 0 0
+cpu0 16676372 13528 12915754 1202773096 344331 0 357310 0 0 0
+cpu1 15122049 10126 12453493 1203690098 360767 0 158311 0 0 0
+intr 8131104541 182 10 0 640 2825 0 3 0 1 0 0 20 15 0 0 12349004 0 0 0 0 0 0 0 0 0 565557943 1 0 4783915 1 0 8010447 0 22129836 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ctxt 7655975628
+btime 1633688839
+processes 152072028
+procs_running 2
+procs_blocked 0
+softirq 11637699324 1 1126207326 816 683033639 33243446 0 239 1909656851 0 3590589710
+<<<md>>>
+Personalities : 
+unused devices: <none>
+<<<vbox_guest>>>
+<<<postfix_mailq_status:sep(58)>>>
+postfix/:the Postfix mail system is not running
+<<<livestatus_status:sep(59)>>>
+[demo]
+accept_passive_host_checks;accept_passive_service_checks;average_latency_cmk;average_latency_fetcher;average_latency_generic;average_latency_real_time;average_runnable_jobs_checker;average_runnable_jobs_fetcher;cached_log_messages;check_external_commands;check_host_freshness;check_service_freshness;connections;connections_rate;core_pid;enable_event_handlers;enable_flap_detection;enable_notifications;execute_host_checks;execute_service_checks;external_command_buffer_max;external_command_buffer_slots;external_command_buffer_usage;external_commands;external_commands_rate;forks;forks_rate;has_event_handlers;helper_usage_checker;helper_usage_cmk;helper_usage_fetcher;helper_usage_generic;helper_usage_real_time;host_checks;host_checks_rate;interval_length;is_trial_expired;last_command_check;last_log_rotation;license_usage_history;livechecks;livechecks_rate;livestatus_active_connections;livestatus_overflows;livestatus_overflows_rate;livestatus_queued_connections;livestatus_threads;livestatus_usage;livestatus_version;log_messages;log_messages_rate;mk_inventory_last;nagios_pid;neb_callbacks;neb_callbacks_rate;num_hosts;num_queued_alerts;num_queued_notifications;num_services;obsess_over_hosts;obsess_over_services;process_performance_data;program_start;program_version;requests;requests_rate;service_checks;service_checks_rate;state_file_created
+1;1;0;5.13898e-05;0.000139953;0;0;1.64055e-142;80;1;1;1;4644;0.291822;2772;1;1;1;1;1;16;0;0;32;1.04382e-39;0;0;0;2.33565e-14;0;0.00194185;3.45846e-323;0;396245;6.88645;60;0;0;1645949341;LQ't#$x~}Qi Q`]`Q[ Q9:DE@CJQi ,LQG6CD:@?Qi Qa]_]_Aa_]466Q[ Q65:E:@?Qi Q466Q[ QA=2E7@C>Qi Qr6?E~$ {:?FI C6=62D6 f]h]a__h Wr@C6XQ[ Q:D04>2Qi 72=D6[ QD2>A=60E:>6Qi `eceabbgab[ QE:>6K@?6Qi Q&%rQ[ Q?F>09@DEDQi e[ Q?F>09@DED06I4=F565Qi _[ Q?F>0D6CG:46DQi `ch[ Q?F>0D6CG:46D06I4=F565Qi _[ Q6IE6?D:@?DQi LQ?E@AQi 72=D6NN[ LQG6CD:@?Qi Qa]_]_Aa_]466Q[ Q65:E:@?Qi Q466Q[ QA=2E7@C>Qi Qr6?E~$ {:?FI C6=62D6 f]h]a__h Wr@C6XQ[ Q:D04>2Qi 72=D6[ QD2>A=60E:>6Qi `ece`c_`ga[ QE:>6K@?6Qi Q&%rQ[ Q?F>09@DEDQi `[ Q?F>09@DED06I4=F565Qi _[ Q?F>0D6CG:46DQi a[ Q?F>0D6CG:46D06I4=F565Qi _[ Q6IE6?D:@?DQi LQ?E@AQi 72=D6NN.N;1;9.88131e-324;1;0;0;0;20;3.2198e-05;2.0.0p20;229;1.15354e-38;1646140265;2772;0;0;7;0;0;166;0;0;1;1646302017;Check_MK 2.0.0p20;8160;1.00803;185142;1.12155;1645949341
+<<<livestatus_ssl_certs:sep(124)>>>
+[demo]
+/omd/sites/demo/etc/ssl/ca.pem|33150413327
+/omd/sites/demo/etc/ssl/sites/demo.pem|33150413327
+<<<mkeventd_status:sep(0)>>>
+["demo"]
+[["status_config_load_time", "status_num_open_events", "status_virtual_memory_size", "status_messages", "status_message_rate", "status_average_message_rate", "status_rule_tries", "status_rule_trie_rate", "status_average_rule_trie_rate", "status_rule_hits", "status_rule_hit_rate", "status_average_rule_hit_rate", "status_drops", "status_drop_rate", "status_average_drop_rate", "status_overflows", "status_overflow_rate", "status_average_overflow_rate", "status_events", "status_event_rate", "status_average_event_rate", "status_connects", "status_connect_rate", "status_average_connect_rate", "status_average_processing_time", "status_average_sync_time", "status_average_request_time", "status_replication_slavemode", "status_replication_last_sync", "status_replication_success", "status_event_limit_host", "status_event_limit_rule", "status_event_limit_overall", "status_event_limit_active_hosts", "status_event_limit_active_rules", "status_event_limit_active_overall"], [1646229790.144575, 0, 315183104, 0, 0.0, 0.0, 0, 0.0, 0.0, 0, 0.0, 0.0, 0, 0.0, 0.0, 0, 0.0, 0.0, 0, 0.0, 0.0, 3150, 0.0, 0.04108531652199926, 0.0, 0.0, 0.00034276323437300435, "master", 0.0, false, 1000, 1000, 10000, [], [], false]]
+<<<cmk_site_statistics:sep(59)>>>
+[demo]
+7;0;0;0
+160;0;0;2;0;4
+<<<job>>>
+==> letsencrypt-renew <==
+start_time 1646179141
+exit_code 0
+real_time 0:00.62
+user_time 0.23
+system_time 0.17
+reads 0
+writes 16
+max_res_kbytes 31004
+avg_mem_kbytes 0
+invol_context_switches 26
+vol_context_switches 36
+<<<chrony:cached(1646303474,30)>>>
+Reference ID    : A29FC801 (162.159.200.1)
+Stratum         : 4
+Ref time (UTC)  : Thu Mar 03 10:27:02 2022
+System time     : 0.000001389 seconds fast of NTP time
+Last offset     : -0.000003247 seconds
+RMS offset      : 0.000098133 seconds
+Frequency       : 21.372 ppm slow
+Residual freq   : +0.000 ppm
+Skew            : 0.099 ppm
+Root delay      : 0.038394172 seconds
+Root dispersion : 0.000411561 seconds
+Update interval : 259.3 seconds
+Leap status     : Normal
+<<<omd_status:cached(1646303474,60)>>>
+[demo]
+mkeventd 0
+liveproxyd 0
+mknotifyd 0
+rrdcached 0
+cmc 0
+apache 0
+dcd 0
+redis 0
+crontab 0
+OVERALL 0
+<<<mknotifyd:sep(0)>>>
+1646303505
+[demo]
+Version:         2.0.0p20
+Updated:         1646303496 (2022-03-03 10:31:36)
+Started:         1646229790 (2022-03-02 14:03:10, 73706 sec ago)
+Configuration:   1646229790 (2022-03-02 14:03:10, 73706 sec ago)
+Listening FD:    None
+
+Spool:           New
+Count:           0
+Oldest:          -
+Youngest:        -
+
+Spool:           Deferred
+Count:           0
+Oldest:          -
+Youngest:        -
+
+Spool:           Corrupted
+Count:           0
+Oldest:          -
+Youngest:        -
+<<<omd_apache:sep(124)>>>
+[demo]
+/demo/check_mk/sidebar_snapin.py?names=tactical_overview&since=1646302585&_ajaxid=1646303478|200|2586|26769
+/demo/check_mk/ajax_sidebar_get_messages.py?_ajaxid=1646303490|200|126|15806
+/demo/check_mk/ajax_sidebar_get_unack_incomp_werks.py?_ajaxid=1646303490|200|152|19958
+/demo/check_mk/host_service_graph_popup.py?site=demo&host_name=sc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra&service=Check_MK&_ajaxid=1646303493|200|45072|29872
+/demo/check_mk/ajax_popup_action_menu.py?_back_url=view.py%3Fhost%3Dsc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra%26site%3Ddemo%26view_name%3Dhost&_display_options=htbfcoderuw&host=sc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra&service=Check_MK&site=demo&_ajaxid=1646303494|200|1771|21292
+/demo/check_mk/themes/facelift/images/icon_check_plugins.svg|200|1015|259
+/demo/check_mk/view.py?host=sc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra&site=demo&view_name=host&_display_options=htbfcoderuw&_do_actions=&_ajaxid=1646303498|200|55860|107846
+/demo/check_mk/host_service_graph_popup.py?site=demo&host_name=sc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra&service=Check_MK&_ajaxid=1646303500|200|45072|32876
+/demo/check_mk/ajax_popup_action_menu.py?_back_url=view.py%3Fhost%3Dsc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra%26site%3Ddemo%26view_name%3Dhost&_display_options=htbfcoderuw&host=sc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra&service=Check_MK&site=demo&_ajaxid=1646303500|200|1771|21502
+/demo/check_mk/fetch_agent_output.py?_start=1&back_url=view.py%3Fhost%3Dsc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra%26site%3Ddemo%26view_name%3Dhost&folder=&host=sc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra&type=agent|200|7865|79272
+/demo/check_mk/themes/facelift/images/icon_disable_test.png|200|1396|266
+/demo/check_mk/themes/facelift/images/icon_delete.svg|200|1426|231
+/demo/check_mk/fetch_agent_output.py?back_url=view.py%3Fhost%3Dsc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra%26site%3Ddemo%26view_name%3Dhost&folder=&host=sc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra&type=agent|200|7892|40742
+/demo/check_mk/fetch_agent_output.py?back_url=view.py%3Fhost%3Dsc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra%26site%3Ddemo%26view_name%3Dhost&folder=&host=sc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra&type=agent|200|7890|55774
+/demo/check_mk/fetch_agent_output.py?back_url=view.py%3Fhost%3Dsc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra%26site%3Ddemo%26view_name%3Dhost&folder=&host=sc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra&type=agent|200|7892|39040
+
+<<<omd_info:sep(59)>>>
+[versions]
+version;number;edition;demo
+2.0.0p20.cee;2.0.0p20;cee;0
+[sites]
+site;used_version;autostart
+demo;2.0.0p20.cee;1
+<<<local:sep(0)>>>
+<<<check_mk:cached(1646302101,3600)>>>
+AgentUpdate: last_check 1646302101.7417483 last_update 1646298483.4836729 aghash 9b786a9f747079af pending_hash None update_url https://sc-ro-buc-01-sph-cmk-demo-01.ab.ra.cada.bra/demo/check_mk error None
