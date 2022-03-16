@@ -1,0 +1,1859 @@
+<<<check_mk>>>
+Version: 2.0.0p1
+BuildDate: Mar 16 2021
+AgentOS: windows
+Hostname: MSSQL2014
+Architecture: 64bit
+WorkingDirectory: C:\Windows\system32
+ConfigFile: C:\Program Files (x86)\checkmk\service\check_mk.yml
+LocalConfigFile: C:\ProgramData\checkmk\agent\check_mk.user.yml
+AgentDirectory: C:\Program Files (x86)\checkmk\service
+PluginsDirectory: C:\ProgramData\checkmk\agent\plugins
+StateDirectory: C:\ProgramData\checkmk\agent\state
+ConfigDirectory: C:\ProgramData\checkmk\agent\config
+TempDirectory: C:\ProgramData\checkmk\agent\tmp
+LogDirectory: C:\ProgramData\checkmk\agent\log
+SpoolDirectory: C:\ProgramData\checkmk\agent\spool
+LocalDirectory: C:\ProgramData\checkmk\agent\local
+OnlyFrom: 
+<<<wmi_cpuload:sep(124)>>>
+[system_perf]
+AlignmentFixupsPersec|Caption|ContextSwitchesPersec|Description|ExceptionDispatchesPersec|FileControlBytesPersec|FileControlOperationsPersec|FileDataOperationsPersec|FileReadBytesPersec|FileReadOperationsPersec|FileWriteBytesPersec|FileWriteOperationsPersec|FloatingEmulationsPersec|Frequency_Object|Frequency_PerfTime|Frequency_Sys100NS|Name|PercentRegistryQuotaInUse|PercentRegistryQuotaInUse_Base|Processes|ProcessorQueueLength|SystemCallsPersec|SystemUpTime|Threads|Timestamp_Object|Timestamp_PerfTime|Timestamp_Sys100NS|WMIStatus
+0||1634685676||1814045|257575040091|2975447548|1428524497|16141758354190|741001795|3123766100168|687522702|0|10000000|100000000|10000000||176310706|4294967295|141|0|976288951|132899475903495056|1403|132912006267457381|125240382321812|132912078267450000|OK
+[computer_system]
+AdminPasswordStatus|AutomaticManagedPagefile|AutomaticResetBootOption|AutomaticResetCapability|BootOptionOnLimit|BootOptionOnWatchDog|BootROMSupported|BootStatus|BootupState|Caption|ChassisBootupState|ChassisSKUNumber|CreationClassName|CurrentTimeZone|DaylightInEffect|Description|DNSHostName|Domain|DomainRole|EnableDaylightSavingsTime|FrontPanelResetStatus|HypervisorPresent|InfraredSupported|InitialLoadInfo|InstallDate|KeyboardPasswordStatus|LastLoadInfo|Manufacturer|Model|Name|NameFormat|NetworkServerModeEnabled|NumberOfLogicalProcessors|NumberOfProcessors|OEMLogoBitmap|OEMStringArray|PartOfDomain|PauseAfterReset|PCSystemType|PCSystemTypeEx|PowerManagementCapabilities|PowerManagementSupported|PowerOnPasswordStatus|PowerState|PowerSupplyState|PrimaryOwnerContact|PrimaryOwnerName|ResetCapability|ResetCount|ResetLimit|Roles|Status|SupportContactDescription|SystemFamily|SystemSKUNumber|SystemStartupDelay|SystemStartupOptions|SystemStartupSetting|SystemType|ThermalState|TotalPhysicalMemory|UserName|WakeUpType|Workgroup|WMIStatus
+3|1|1|1|||1|<array>|Normal boot|MSSQL2014|3||Win32_ComputerSystem|120|0|AT/AT COMPATIBLE|MSSQL2014|mammoth.internal|3|1|3|1|0|||3||Joyent|SmartDC HVM|MSSQL2014||1|8|1|||1|-1|1|1|||3|0|3||Owner|1|65535|65535|<array>|OK||Virtual Machine|001||||x64-based PC|3|137438494720||6||OK
+<<<uptime>>>
+1252403
+<<<mem>>>
+MemTotal:      134217280 kB
+MemFree:       6487516 kB
+SwapTotal:     19922944 kB
+SwapFree:      19748476 kB
+PageTotal:     154140224 kB
+PageFree:      26235992 kB
+VirtualTotal:  137438953344 kB
+VirtualFree:   137434601584 kB
+<<<fileinfo:sep(124)>>>
+1646727026
+<<<df:sep(9)>>>
+Backup	NTFS	576713724	278359892	298353832	49%	B:\
+C:\	NTFS	104292348	55326012	48966336	54%	C:\
+SQLTEMPDB	NTFS	209712124	25837048	183875076	13%	E:\
+SQLVMLOG	NTFS	314569724	43303372	271266352	14%	G:\
+SQLVMDATA2	NTFS	1048572924	568134188	480438736	55%	H:\
+<<<services>>>
+AJRouter stopped/demand AllJoyn Router Service
+ALG stopped/demand Application Layer Gateway Service
+AppIDSvc stopped/demand Application Identity
+Appinfo running/demand Application Information
+AppMgmt stopped/demand Application Management
+AppReadiness stopped/demand App Readiness
+AppVClient stopped/disabled Microsoft App-V Client
+AppXSvc stopped/demand AppX Deployment Service (AppXSVC)
+AudioEndpointBuilder stopped/demand Windows Audio Endpoint Builder
+Audiosrv stopped/demand Windows Audio
+AxInstSV stopped/disabled ActiveX Installer (AxInstSV)
+AzureAttestService running/auto AzureAttestService
+BFE running/auto Base Filtering Engine
+BITS stopped/demand Background Intelligent Transfer Service
+BrokerInfrastructure running/auto Background Tasks Infrastructure Service
+BTAGService stopped/demand Bluetooth Audio Gateway Service
+BthAvctpSvc running/demand AVCTP service
+bthserv stopped/demand Bluetooth Support Service
+camsvc stopped/demand Capability Access Manager Service
+CDPSvc running/auto Connected Devices Platform Service
+CertPropSvc running/demand Certificate Propagation
+CheckMkService running/auto Check MK Service
+ClipSVC stopped/demand Client License Service (ClipSVC)
+COMSysApp stopped/demand COM+ System Application
+CoreMessagingRegistrar running/auto CoreMessaging
+CryptSvc running/auto Cryptographic Services
+CscService stopped/disabled Offline Files
+DcomLaunch running/auto DCOM Server Process Launcher
+defragsvc stopped/demand Optimize drives
+DeviceAssociationService stopped/demand Device Association Service
+DeviceInstall stopped/demand Device Install Service
+DevQueryBroker stopped/demand DevQuery Background Discovery Broker
+Dhcp running/auto DHCP Client
+diagnosticshub.standardcollector.service stopped/demand Microsoft (R) Diagnostics Hub Standard Collector Service
+DiagTrack running/auto Connected User Experiences and Telemetry
+DmEnrollmentSvc stopped/demand Device Management Enrollment Service
+dmwappushservice stopped/disabled Device Management Wireless Application Protocol (WAP) Push message Routing Service
+Dnscache running/auto DNS Client
+DoSvc stopped/demand Delivery Optimization
+dot3svc stopped/demand Wired AutoConfig
+DPS running/auto Diagnostic Policy Service
+DsmSvc stopped/demand Device Setup Manager
+DsSvc running/demand Data Sharing Service
+Eaphost stopped/demand Extensible Authentication Protocol
+EFS stopped/demand Encrypting File System (EFS)
+embeddedmode stopped/demand Embedded Mode
+EntAppSvc stopped/demand Enterprise App Management Service
+EventLog running/auto Windows Event Log
+EventSystem running/auto COM+ Event System
+fdPHost stopped/demand Function Discovery Provider Host
+FDResPub stopped/demand Function Discovery Resource Publication
+FontCache running/auto Windows Font Cache Service
+FontCache3.0.0.0 stopped/demand Windows Presentation Foundation Font Cache 3.0.0.0
+FrameServer stopped/demand Windows Camera Frame Server
+gpsvc running/auto Group Policy Client
+GraphicsPerfSvc stopped/disabled GraphicsPerfSvc
+hidserv stopped/demand Human Interface Device Service
+HvHost stopped/demand HV Host Service
+icssvc stopped/disabled Windows Mobile Hotspot Service
+IKEEXT running/auto IKE and AuthIP IPsec Keying Modules
+InstallService stopped/demand Microsoft Store Install Service
+iphlpsvc running/auto IP Helper
+KeyIso running/demand CNG Key Isolation
+KPSSVC stopped/demand KDC Proxy Server service (KPS)
+KtmRm stopped/demand KtmRm for Distributed Transaction Coordinator
+LanmanServer running/auto Server
+LanmanWorkstation running/auto Workstation
+lfsvc stopped/disabled Geolocation Service
+LicenseManager running/demand Windows License Manager Service
+lltdsvc stopped/disabled Link-Layer Topology Discovery Mapper
+lmhosts running/demand TCP/IP NetBIOS Helper
+LSM running/auto Local Session Manager
+MapsBroker stopped/disabled Downloaded Maps Manager
+MozillaMaintenance stopped/demand Mozilla Maintenance Service
+mpssvc running/auto Windows Defender Firewall
+MSDTC running/auto Distributed Transaction Coordinator
+MsDtsServer120 running/auto SQL Server Integration Services 12.0
+MsDtsServer150 stopped/demand SQL Server Integration Services 15.0
+MSiSCSI running/auto Microsoft iSCSI Initiator Service
+msiserver stopped/demand Windows Installer
+MsMpiLaunchSvc stopped/demand MS-MPI Launch Service
+MSOLAP$MSSQLSERVERPROD stopped/demand SQL Server Analysis Services (MSSQLSERVERPROD)
+MSSQL$MSSQLSERVERPROD running/auto SQL Server (MSSQLSERVERPROD)
+MSSQLFDLauncher stopped/demand SQL Full-text Filter Daemon Launcher (MSSQLSERVER)
+MSSQLFDLauncher$MSSQLSERVERPROD running/demand SQL Full-text Filter Daemon Launcher (MSSQLSERVERPROD)
+MSSQLLaunchpad stopped/demand SQL Server Launchpad (MSSQLSERVER)
+MSSQLSERVER stopped/demand SQL Server (MSSQLSERVER)
+MSSQLServerOLAPService stopped/demand SQL Server Analysis Services (MSSQLSERVER)
+NcaSvc stopped/demand Network Connectivity Assistant
+NcbService running/demand Network Connection Broker
+Netlogon running/auto Netlogon
+Netman running/demand Network Connections
+netprofm running/demand Network List Service
+NetSetupSvc stopped/demand Network Setup Service
+NetTcpPortSharing stopped/disabled Net.Tcp Port Sharing Service
+NgcCtnrSvc stopped/demand Microsoft Passport Container
+NgcSvc stopped/demand Microsoft Passport
+NlaSvc running/auto Network Location Awareness
+nsi running/auto Network Store Interface Service
+PcaSvc running/demand Program Compatibility Assistant Service
+PerfHost stopped/demand Performance Counter DLL Host
+PhoneSvc stopped/disabled Phone Service
+pla running/demand Performance Logs & Alerts
+PlugPlay running/demand Plug and Play
+PolicyAgent running/demand IPsec Policy Agent
+Power running/auto Power
+PrintNotify stopped/demand Printer Extensions and Notifications
+ProfSvc running/auto User Profile Service
+PushToInstall stopped/disabled Windows PushToInstall Service
+QWAVE stopped/demand Quality Windows Audio Video Experience
+RasAuto stopped/demand Remote Access Auto Connection Manager
+RasMan running/auto Remote Access Connection Manager
+RemoteAccess stopped/disabled Routing and Remote Access
+RemoteRegistry stopped/auto Remote Registry
+ReportServer$MSSQLSERVERPROD running/auto SQL Server Reporting Services (MSSQLSERVERPROD)
+RmSvc stopped/disabled Radio Management Service
+RpcEptMapper running/auto RPC Endpoint Mapper
+RpcLocator stopped/demand Remote Procedure Call (RPC) Locator
+RpcSs running/auto Remote Procedure Call (RPC)
+RSoPProv stopped/demand Resultant Set of Policy Provider
+sacsvr stopped/demand Special Administration Console Helper
+SamSs running/auto Security Accounts Manager
+SCardSvr stopped/demand Smart Card
+ScDeviceEnum stopped/disabled Smart Card Device Enumeration Service
+Schedule running/auto Task Scheduler
+SCPolicySvc stopped/demand Smart Card Removal Policy
+seclogon stopped/demand Secondary Logon
+SecurityHealthService running/demand Windows Security Service
+SEMgrSvc stopped/disabled Payments and NFC/SE Manager
+SENS running/auto System Event Notification Service
+Sense stopped/demand Windows Defender Advanced Threat Protection Service
+SensorDataService stopped/disabled Sensor Data Service
+SensorService stopped/demand Sensor Service
+SensrSvc stopped/demand Sensor Monitoring Service
+SessionEnv running/demand Remote Desktop Configuration
+SgrmBroker stopped/demand System Guard Runtime Monitor Broker
+SharedAccess stopped/disabled Internet Connection Sharing (ICS)
+ShellHWDetection running/auto Shell Hardware Detection
+shpamsvc stopped/disabled Shared PC Account Manager
+smphost stopped/demand Microsoft Storage Spaces SMP
+SNMPTRAP stopped/demand SNMP Trap
+Spooler running/auto Print Spooler
+sppsvc running/auto Software Protection
+SQL_Server_Distributed_Replay_Client stopped/demand SQL Server Distributed Replay Client
+SQL_Server_Distributed_Replay_Controller stopped/demand SQL Server Distributed Replay Controller
+SQLAgent$MSSQLSERVERPROD running/auto SQL Server Agent (MSSQLSERVERPROD)
+SQLBrowser running/auto SQL Server Browser
+SQLPBDMS stopped/demand SQL Server PolyBase Data Movement (MSSQLSERVER)
+SQLPBENGINE stopped/demand SQL Server PolyBase Engine (MSSQLSERVER)
+SQLSERVERAGENT stopped/demand SQL Server Agent (MSSQLSERVER)
+SQLTELEMETRY stopped/demand SQL Server CEIP service (MSSQLSERVER)
+SQLWriter running/auto SQL Server VSS Writer
+SSASTELEMETRY stopped/demand SQL Server Analysis Services CEIP (MSSQLSERVER)
+SSDPSRV stopped/disabled SSDP Discovery
+ssh-agent stopped/disabled OpenSSH Authentication Agent
+SSISScaleOutWorker150 running/auto SQL Server Integration Services Scale Out Worker 15.0
+SSISTELEMETRY150 running/auto SQL Server Integration Services CEIP service 15.0
+SstpSvc running/demand Secure Socket Tunneling Protocol Service
+StateRepository running/demand State Repository Service
+stisvc stopped/demand Windows Image Acquisition (WIA)
+StorSvc running/demand Storage Service
+svsvc stopped/demand Spot Verifier
+swprv stopped/demand Microsoft Software Shadow Copy Provider
+SysMain running/auto SysMain
+SystemEventsBroker running/auto System Events Broker
+TabletInputService running/demand Touch Keyboard and Handwriting Panel Service
+tapisrv stopped/demand Telephony
+TermService running/demand Remote Desktop Services
+Themes running/auto Themes
+TieringEngineService stopped/demand Storage Tiers Management
+TimeBrokerSvc running/demand Time Broker
+TokenBroker running/demand Web Account Manager
+TrkWks running/auto Distributed Link Tracking Client
+TrustedInstaller stopped/demand Windows Modules Installer
+tzautoupdate stopped/disabled Auto Time Zone Updater
+UALSVC running/auto User Access Logging Service
+UevAgentService stopped/disabled User Experience Virtualization Service
+UmRdpService running/demand Remote Desktop Services UserMode Port Redirector
+upnphost stopped/disabled UPnP Device Host
+UserManager running/auto User Manager
+UsoSvc running/auto Update Orchestrator Service
+VaultSvc stopped/demand Credential Manager
+vds stopped/demand Virtual Disk
+vmicguestinterface stopped/demand Hyper-V Guest Service Interface
+vmicheartbeat stopped/demand Hyper-V Heartbeat Service
+vmickvpexchange stopped/demand Hyper-V Data Exchange Service
+vmicrdv stopped/demand Hyper-V Remote Desktop Virtualization Service
+vmicshutdown stopped/demand Hyper-V Guest Shutdown Service
+vmictimesync stopped/demand Hyper-V Time Synchronization Service
+vmicvmsession stopped/demand Hyper-V PowerShell Direct Service
+vmicvss stopped/demand Hyper-V Volume Shadow Copy Requestor
+VSS stopped/demand Volume Shadow Copy
+W32Time running/auto Windows Time
+WaaSMedicSvc stopped/demand Windows Update Medic Service
+WalletService stopped/disabled WalletService
+WarpJITSvc stopped/demand WarpJITSvc
+WbioSrvc stopped/demand Windows Biometric Service
+Wcmsvc running/auto Windows Connection Manager
+WdiServiceHost stopped/demand Diagnostic Service Host
+WdiSystemHost stopped/demand Diagnostic System Host
+WdNisSvc running/demand Windows Defender Antivirus Network Inspection Service
+Wecsvc stopped/demand Windows Event Collector
+WEPHOSTSVC stopped/demand Windows Encryption Provider Host Service
+wercplsupport stopped/demand Problem Reports and Solutions Control Panel Support
+WerSvc stopped/demand Windows Error Reporting Service
+WiaRpc stopped/demand Still Image Acquisition Events
+WinDefend running/auto Windows Defender Antivirus Service
+WinHttpAutoProxySvc running/demand WinHTTP Web Proxy Auto-Discovery Service
+Winmgmt running/auto Windows Management Instrumentation
+WinRM running/auto Windows Remote Management (WS-Management)
+wisvc stopped/disabled Windows Insider Service
+wlidsvc stopped/demand Microsoft Account Sign-in Assistant
+wmiApSrv stopped/demand WMI Performance Adapter
+WMPNetworkSvc stopped/demand Windows Media Player Network Sharing Service
+WPDBusEnum stopped/demand Portable Device Enumerator Service
+WpnService running/auto Windows Push Notifications System Service
+WSearch stopped/disabled Windows Search
+wuauserv stopped/demand Windows Update
+CaptureService_542c074 stopped/demand CaptureService_542c074
+cbdhsvc_542c074 stopped/demand Clipboard User Service_542c074
+CDPUserSvc_542c074 running/auto Connected Devices Platform User Service_542c074
+ConsentUxUserSvc_542c074 stopped/demand ConsentUX_542c074
+DevicePickerUserSvc_542c074 stopped/disabled DevicePicker_542c074
+DevicesFlowUserSvc_542c074 stopped/demand DevicesFlow_542c074
+PimIndexMaintenanceSvc_542c074 stopped/demand Contact Data_542c074
+PrintWorkflowUserSvc_542c074 stopped/demand PrintWorkflow_542c074
+UnistoreSvc_542c074 stopped/demand User Data Storage_542c074
+UserDataSvc_542c074 stopped/demand User Data Access_542c074
+WpnUserService_542c074 running/auto Windows Push Notifications User Service_542c074
+CaptureService_6ad2c7b stopped/demand CaptureService_6ad2c7b
+cbdhsvc_6ad2c7b stopped/demand Clipboard User Service_6ad2c7b
+CDPUserSvc_6ad2c7b running/auto Connected Devices Platform User Service_6ad2c7b
+ConsentUxUserSvc_6ad2c7b stopped/demand ConsentUX_6ad2c7b
+DevicePickerUserSvc_6ad2c7b stopped/disabled DevicePicker_6ad2c7b
+DevicesFlowUserSvc_6ad2c7b stopped/demand DevicesFlow_6ad2c7b
+PimIndexMaintenanceSvc_6ad2c7b stopped/demand Contact Data_6ad2c7b
+PrintWorkflowUserSvc_6ad2c7b stopped/demand PrintWorkflow_6ad2c7b
+UnistoreSvc_6ad2c7b stopped/demand User Data Storage_6ad2c7b
+UserDataSvc_6ad2c7b stopped/demand User Data Access_6ad2c7b
+WpnUserService_6ad2c7b running/auto Windows Push Notifications User Service_6ad2c7b
+<<<dotnet_clrmemory:sep(124)>>>
+AllocatedBytesPersec|Caption|Description|FinalizationSurvivors|Frequency_Object|Frequency_PerfTime|Frequency_Sys100NS|Gen0heapsize|Gen0PromotedBytesPerSec|Gen1heapsize|Gen1PromotedBytesPerSec|Gen2heapsize|LargeObjectHeapsize|Name|NumberBytesinallHeaps|NumberGCHandles|NumberGen0Collections|NumberGen1Collections|NumberGen2Collections|NumberInducedGC|NumberofPinnedObjects|NumberofSinkBlocksinuse|NumberTotalcommittedBytes|NumberTotalreservedBytes|PercentTimeinGC|PercentTimeinGC_Base|ProcessID|PromotedFinalizationMemoryfromGen0|PromotedMemoryfromGen0|PromotedMemoryfromGen1|Timestamp_Object|Timestamp_PerfTime|Timestamp_Sys100NS|WMIStatus
+401215860104|||28407|0|100000000|10000000|1447452688|10494168|10955760|70050960|184168604|43522312|_Global_|238646676|79421|15544|8299|1401|55|327|3193|1617299840|14193408384|17786256|4294967295|0|10462950|10494168|70050960|0|125240394148326|132912078268630000|OK
+2416158020|||20|0|100000000|10000000|2097152|5112|117768|0|55682492|18882680|Ssms|74682940|71236|3706|671|94|39|0|2887|77541376|100638720|17955|1433051598|9968|356|5112|0|0|125240394148326|132912078268630000|OK
+0|||0|0|100000000|10000000|0|0|0|0|0|0|taskhostw|0|99|0|0|0|0|0|49|0|0|0|0|0|0|0|0|0|125240394148326|132912078268630000|OK
+347025224|||75|0|100000000|10000000|2097168|7336|59704|0|594504|382696|SQLAGENT|1036904|507|574|78|20|0|1|12|2486272|402644992|98|878949596|6116|7200|7336|0|0|125240394148326|132912078268630000|OK
+51455150848|||2|0|100000000|10000000|64679104|1400|1592|49896|1604640|17427360|ReportingServicesService|19033592|905|2311|2300|396|15|281|18|81316224|6442449280|73111|2207948|4268|32|1400|49896|0|125240394148326|132912078268630000|OK
+138923398088|||28023|0|100000000|10000000|1374384960|10427248|10579680|70001064|123297496|3071464|sqlservr|136948640|5848|5429|4936|855|1|45|179|1444691968|6442385408|151|51668198|4260|10427248|10427248|70001064|0|125240394148326|132912078268630000|OK
+309704352|||143|0|100000000|10000000|2097152|16512|148080|0|888952|1785816|sqlceip|2822848|250|117|11|2|0|0|20|4993024|402644992|222|4101761254|4252|9060|16512|0|0|125240394148326|132912078268630000|OK
+0|||0|0|100000000|10000000|0|0|0|0|0|0|MsDtsSrvr|0|67|0|0|0|0|0|12|0|0|0|0|0|0|0|0|0|125240394148326|132912078268630000|OK
+7156493520|||144|0|100000000|10000000|2097152|36560|48936|0|2100520|1972296|Microsoft.SqlServer.IntegrationServices.WorkerAgentServiceHost|4121752|509|3407|303|34|0|0|16|6270976|402644992|171|140553523|4220|19054|36560|0|0|125240394148326|132912078268630000|OK
+<<<winperf_phydisk>>>
+1646727026.88 234 100000000
+6 instances: 0_C: 1_E: 2_B: 3_H: 4_G: _Total
+-36 0 0 0 0 0 0 rawcount
+-34 110358660918 4298308225813 88009876015 15764990483829 486865082369 4149706465788 type(20570500)
+-34 132912006268758268 132912006268758268 132912006268758268 132912006268758268 132912006268758268 132912006268758268 type(40030500)
+1166 110358660918 4298308225813 88009876015 15764990483829 486865082369 20748532328944 type(550500)
+-32 35411558946 71957367783 43121072167 14592069668008 8093855133 2950130704407 type(20570500)
+-32 132912006268758268 132912006268758268 132912006268758268 132912006268758268 132912006268758268 132912006268758268 type(40030500)
+1168 35411558946 71957367783 43121072167 14592069668008 8093855133 14750653522037 type(550500)
+-30 74947101972 4226350858030 44888803848 1172920815821 478771227236 1199575761381 type(20570500)
+-30 132912006268758268 132912006268758268 132912006268758268 132912006268758268 132912006268758268 132912006268758268 type(40030500)
+1170 74947101972 4226350858030 44888803848 1172920815821 478771227236 5997878806907 type(550500)
+-28 4074981404 3344527058 3925431766 3130238610 2452877322 4043154272 average_timer
+-28 12969074 28598231 1566049 116784505 50037380 209955239 average_base
+-26 1928271188 2314139398 1713992070 3477765776 3629140002 178406546 average_timer
+-26 1328767 13565227 827425 101918675 251943 117892037 average_base
+-24 2146710216 1030387660 2211439696 3947440130 3118704616 3864747726 average_timer
+-24 11640307 15033004 738624 14865830 49785437 92063202 average_base
+-22 12969074 28598231 1566049 116784505 50037380 209955239 counter
+-20 1328767 13565227 827425 101918675 251943 117892037 counter
+-18 11640307 15033004 738624 14865830 49785437 92063202 counter
+-16 115836459008 1822503387136 1431708510208 9269061259776 446116302848 13085225918976 bulk_count
+-14 40694580736 868845904896 721915096576 9018751806464 220847788544 10871055177216 bulk_count
+-12 75141878272 953657482240 709793413632 250309453312 225268514304 2214170741760 bulk_count
+-10 115836459008 1822503387136 1431708510208 9269061259776 446116302848 13085225918976 average_bulk
+-10 12969074 28598231 1566049 116784505 50037380 209955239 average_base
+-8 40694580736 868845904896 721915096576 9018751806464 220847788544 10871055177216 average_bulk
+-8 1328767 13565227 827425 101918675 251943 117892037 average_base
+-6 75141878272 953657482240 709793413632 250309453312 225268514304 2214170741760 average_bulk
+-6 11640307 15033004 738624 14865830 49785437 92063202 average_base
+1248 12457746239682 7507874294506 7104406521717 7052226570058 7384892565126 8301429238217 type(20570500)
+1248 132912006268758268 132912006268758268 132912006268758268 132912006268758268 132912006268758268 132912006268758268 type(40030500)
+1250 218063 4214 15591 3149 0 241017 counter
+<<<winperf_if>>>
+1646727026.89 510 100000000
+1 instances: Red_Hat_VirtIO_Ethernet_Adapter
+-122 995777837413 bulk_count
+-110 1339697802 bulk_count
+-244 605412920 bulk_count
+-58 734284882 bulk_count
+10 1001000000 large_rawcount
+-246 199377883611 bulk_count
+14 605412875 bulk_count
+16 45 bulk_count
+18 0 large_rawcount
+20 0 large_rawcount
+22 0 large_rawcount
+-4 796399953802 bulk_count
+26 734282375 bulk_count
+28 2507 bulk_count
+30 0 large_rawcount
+32 0 large_rawcount
+34 0 large_rawcount
+1086 0 large_rawcount
+1088 0 large_rawcount
+1090 0 bulk_count
+1092 0 bulk_count
+1094 0 large_rawcount
+<<<winperf_processor>>>
+1646727026.91 238 100000000
+9 instances: 0 1 2 3 4 5 6 7 _Total
+-232 10198239062500 10081707031250 9500014218750 9297333750000 10375376875000 10255293906250 10061860625000 10013908125000 9972966699218 100nsec_timer_inv
+-96 1942732187500 2062044062500 2681945000000 2901659687500 1799237656250 1936368906250 2142250468750 2201705937500 2208492988281 100nsec_timer
+-94 383068281250 380273437500 342065312500 325031093750 349410000000 332361718750 319913437500 308410468750 342566718750 100nsec_timer
+-90 1900894993 1952278191 1880633635 1834653887 1912974244 1857334962 1839433809 1826940884 2120242717 counter
+458 83235312500 87508437500 84459375000 72983437500 89680156250 71125937500 88993125000 69142343750 80891015625 100nsec_timer
+460 49657031250 27547187500 27291875000 24382968750 29421718750 25863437500 29205312500 25783593750 29894140625 100nsec_timer
+1096 176851856 169454612 169783840 172044766 171474178 169268032 170371893 170676060 1369925237 counter
+1098 1 0 1 0 0 0 1 1 4 rawcount
+1508 9776936343841 9642745545881 9148816190570 8993669204405 10039820961729 9932310806509 9744294043645 9693410614186 9621500463845 100nsec_timer
+1510 9776936343841 9642745545881 9148816190570 8993669204405 10039820961729 9932310806509 9744294043645 9693410614186 9621500463845 100nsec_timer
+1512 0 0 0 0 0 0 0 0 0 100nsec_timer
+1514 0 0 0 0 0 0 0 0 0 100nsec_timer
+1516 1496038272 1589952075 1448111052 1379398545 1579941163 1506709012 1478925405 1455419942 11934495466 bulk_count
+1518 0 0 0 0 0 0 0 0 0 bulk_count
+1520 0 0 0 0 0 0 0 0 0 bulk_count
+<<<ps:sep(9)>>>
+(SYSTEM,4,8,0,0,0,0,79783733593750,0,8,1260202)	System Idle Process
+(SYSTEM,3816,148,0,4,0,0,79004218750,3435,170,1260202)	System
+(SYSTEM,150656,142804,0,136,0,0,681406250,0,4,1260212)	Registry
+(SYSTEM,2151717528,1256,0,376,0,0,3593750,59,2,1260202)	smss.exe
+(SYSTEM,2151774920,5812,0,488,2,221250000,1778125000,718,11,1260199)	csrss.exe
+(SYSTEM,2151745880,7104,0,564,1,156250,937500,176,1,1260199)	wininit.exe
+(SYSTEM,2151760044,4808,0,572,1,0,1562500,161,10,1260199)	csrss.exe
+(\\NT AUTHORITY\SYSTEM,2151774320,10796,0,636,2,312500,1250000,227,2,1260199)	winlogon.exe
+(SYSTEM,2151764172,17516,0,708,9,13711718750,35816250000,711,10,1260199)	services.exe
+(\\NT AUTHORITY\SYSTEM,2151799892,38376,0,716,26,30437812500,26616718750,2263,12,1260199)	lsass.exe
+(\\NT AUTHORITY\SYSTEM,2151732256,4204,0,856,1,16406250,8906250,86,1,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151795060,25648,0,880,9,315781250,528125000,1246,9,1260198)	svchost.exe
+(\\Font Driver Host\UMFD-1,2151771836,4332,0,904,1,0,468750,49,5,1260198)	fontdrvhost.exe
+(\\Font Driver Host\UMFD-0,2151772104,4364,0,912,1,30468750,128437500,49,5,1260198)	fontdrvhost.exe
+(\\NT AUTHORITY\NETWORK SERVICE,2151773796,17824,0,1004,9,1652500000,1106093750,1111,11,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151758560,12036,0,108,4,150312500,246250000,442,4,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151993948,44184,0,448,10,1126718750,912500000,468,8,1260198)	LogonUI.exe
+(\\Window Manager\DWM-1,2151879312,35240,0,472,16,46093750,28750000,526,10,1260198)	dwm.exe
+(\\NT AUTHORITY\NETWORK SERVICE,2151947524,27676,0,492,14,1040625000,891562500,749,46,1260198)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151746380,7076,0,1056,2,16093750,31718750,148,3,1260198)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151751184,9764,0,1064,5,88437500,106562500,140,4,1260198)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151749920,8012,0,1068,1,18437500,85000000,220,4,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151755976,9900,0,1180,2,10156250,9687500,216,1,1260198)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151759528,11920,0,1192,1,8906250,9062500,288,1,1260198)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151749188,8672,0,1228,3,108281250,250468750,220,5,1260198)	svchost.exe
+(\\NT AUTHORITY\NETWORK SERVICE,2151760900,9644,0,1292,4,117656250,218437500,234,10,1260198)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151752000,6540,0,1412,1,26406250,26875000,177,2,1260198)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151789516,25284,0,1508,20,611250000,565937500,662,8,1260198)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151789732,21344,0,1572,12,118125000,234218750,421,10,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151772708,17548,0,1652,7,97031250,230156250,320,4,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151745748,6024,0,1660,1,9218750,17343750,196,2,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151790688,12756,0,1676,3,10781250,17343750,273,2,1260198)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151755440,8444,0,1684,2,52031250,52812500,179,6,1260198)	svchost.exe
+(\\NT AUTHORITY\NETWORK SERVICE,2151767248,13268,0,1724,5,28437500,24531250,369,5,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151754604,8936,0,1820,2,14218750,13437500,187,2,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151803896,19288,0,1896,10,27370625000,43965312500,402,10,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151794804,10660,0,1916,2,18437500,27187500,227,3,1260198)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151757100,9656,0,1936,3,46875000,64375000,348,9,1260198)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151754888,9272,0,1996,2,16406250,30312500,309,4,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151750824,7244,0,1516,1,10625000,16406250,148,4,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151761132,12428,0,2112,2,15156250,14687500,191,2,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151757796,8404,0,2148,1,13281250,13906250,227,3,1260198)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151796068,7476,0,2244,2,13593750,12187500,190,6,1260198)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151751116,8128,0,2304,2,64843750,125312500,176,5,1260198)	svchost.exe
+(\\NT AUTHORITY\NETWORK SERVICE,2151753140,8812,0,2384,2,25312500,44375000,203,3,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151804228,29044,0,2472,17,12298593750,6118906250,456,19,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151793656,11144,0,2584,2,9687500,12656250,274,4,1260198)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151763568,11912,0,2616,3,39531250,71562500,468,6,1260197)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151858364,26888,0,2724,9,60156250,96875000,649,8,1260197)	spoolsv.exe
+(\\NT AUTHORITY\SYSTEM,2151756440,10000,0,2952,3,35156250,81406250,248,5,1260197)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151741736,5820,0,3024,1,9218750,13593750,112,1,1260197)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151752956,8312,0,2276,2,16875000,64687500,266,4,1260197)	svchost.exe
+(\\NT AUTHORITY\NETWORK SERVICE,2152824140,14776,0,2320,4,191250000,326875000,280,7,1260197)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151867196,51248,0,1400,35,519687500,772812500,525,12,1260197)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151747516,6920,0,2900,1,13437500,16093750,139,1,1260197)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,4351760,28308,0,2768,18,31540312500,37129062500,424,17,1260197)	check_mk_agent.exe
+(\\NT AUTHORITY\SYSTEM,4272808,7912,0,3084,1,12187500,11093750,138,2,1260197)	sqlwriter.exe
+(\\NT AUTHORITY\LOCAL SERVICE,128524,14372,0,3100,12,353593750,160156250,563,21,1260197)	sqlbrowser.exe
+(\\NT AUTHORITY\SYSTEM,2151749796,8744,0,3144,2,48281250,65781250,212,6,1260197)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151742828,5772,0,3196,1,12656250,15312500,161,3,1260197)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2155940476,7000,0,3220,2,14062500,43906250,142,2,1260197)	svchost.exe
+(\\NT AUTHORITY\NETWORK SERVICE,2151795088,12948,0,3276,4,59843750,89687500,253,5,1260197)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151779692,13928,0,3288,2,15312500,15781250,179,1,1260197)	svchost.exe
+(SYSTEM,2155306252,325540,0,3300,345,109212656250,50893437500,852,43,1260197)	MsMpEng.exe
+(\\NT AUTHORITY\SYSTEM,2151773836,12716,0,3564,3,383906250,1104843750,405,11,1260197)	svchost.exe
+(\\NT SERVICE\SSISScaleOutWorker150,4965280,62032,0,4220,57,231093750,233906250,1833,18,1260197)	Microsoft.SqlServer.IntegrationServices.WorkerAgentServiceHost.exe
+(\\NT SERVICE\MsDtsServer120,23468976,23656,0,4228,62,11406250,12812500,294,12,1260197)	MsDtsSrvr.exe
+(\\NT SERVICE\SSISTELEMETRY150,4818208,43884,0,4252,28,81562500,238281250,550,12,1260197)	sqlceip.exe
+(\\MAMMOTH\svc_wmssql_db,186857836,122853272,0,4260,120391,17159087968750,796972187500,1897,133,1260197)	sqlservr.exe
+(\\NT SERVICE\ReportServer$MSSQLSERVERPROD,145335812,224552,0,4268,358,1136250000,1632656250,853,65,1260197)	ReportingServicesService.exe
+(\\NT AUTHORITY\NETWORK SERVICE,2151740708,7520,0,3424,1,9843750,16562500,170,3,1260196)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151748960,7216,0,5632,1,16093750,15156250,151,1,1260194)	svchost.exe
+(\\NT SERVICE\MSSQLFDLauncher$MSSQLSERVERPROD,4260652,5264,0,4588,1,6562500,10156250,106,1,1260192)	fdlauncher.exe
+(\\MAMMOTH\svc_wmssql_agent,4917500,29420,0,6116,67,24684531250,22696406250,2133,23,1260192)	SQLAGENT.EXE
+(\\MAMMOTH\svc_wmssql_agent,2151789072,12748,0,4280,6,61562500,243437500,148,4,1260192)	conhost.exe
+(\\NT SERVICE\MSSQLFDLauncher$MSSQLSERVERPROD,4282088,6468,0,4384,2,312500,1250000,203,10,1260192)	fdhost.exe
+(\\NT SERVICE\MSSQLFDLauncher$MSSQLSERVERPROD,2151781528,11160,0,4496,6,0,625000,122,2,1260192)	conhost.exe
+(SYSTEM,2151794276,12936,0,5832,6,57656250,87343750,211,10,1260191)	NisSrv.exe
+(\\NT AUTHORITY\SYSTEM,2151759412,13420,0,6864,5,25625000,21875000,218,1,1260183)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151771900,13300,0,2452,3,89375000,111875000,233,6,1260182)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151745096,7472,0,6320,1,12812500,14375000,261,3,1260182)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151782292,14484,0,7176,3,30781250,30625000,249,3,1260182)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151754392,10984,0,7172,1,12187500,10156250,146,2,1260172)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151794492,12020,0,8928,2,10625000,11093750,268,3,1252963)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151827340,54936,0,9168,44,15741406250,44097812500,373,9,1252955)	WmiPrvSE.exe
+(\\NT AUTHORITY\SYSTEM,2151761416,11160,0,10020,5,12968750,18906250,268,7,1252938)	svchost.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151817480,25416,0,4320,23,3400312500,15665000000,333,22,1252871)	svchost.exe
+(\\NT AUTHORITY\NETWORK SERVICE,2151769024,12448,0,4912,4,57812500,123281250,268,12,1252871)	msdtc.exe
+(SYSTEM,2151765308,11420,0,3040,4,325937500,153281250,245,5,1252870)	sppsvc.exe
+(\\NT AUTHORITY\SYSTEM,2153906640,17116,0,9844,10,951093750,8671093750,306,9,1252870)	svchost.exe
+(\\NT AUTHORITY\NETWORK SERVICE,2151783112,9876,0,2544,2,156250,781250,195,2,1252869)	SppExtComObj.Exe
+(\\NT AUTHORITY\SYSTEM,2151804424,29456,0,1104,11,20937500,35468750,775,8,1252867)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2151750348,7936,0,4724,1,14843750,13125000,184,2,1252649)	svchost.exe
+(SYSTEM,2151777120,13156,0,8628,1,1562500,36250000,248,9,1204968)	csrss.exe
+(\\NT AUTHORITY\SYSTEM,2151776244,9848,0,88,2,156250,1875000,270,2,1204968)	winlogon.exe
+(\\Font Driver Host\UMFD-4,2151772584,5000,0,8556,1,781250,156250,49,5,1204968)	fontdrvhost.exe
+(\\Window Manager\DWM-4,2151938804,58472,0,2464,15,103593750,313281250,576,11,1204968)	dwm.exe
+(\\MAMMOTH\cristi.popa,2151819080,11704,0,3236,2,1406250,12343750,308,5,1204966)	rdpclip.exe
+(\\MAMMOTH\cristi.popa,2151838772,25872,0,2600,6,44843750,43281250,440,7,1204966)	sihost.exe
+(\\MAMMOTH\cristi.popa,2151790160,14940,0,2752,3,9375000,12656250,271,3,1204966)	svchost.exe
+(\\MAMMOTH\cristi.popa,2151836604,25916,0,6136,5,11250000,12812500,351,2,1204966)	svchost.exe
+(\\MAMMOTH\cristi.popa,2152846596,13080,0,5392,4,3281250,6250000,211,4,1204966)	taskhostw.exe
+(\\MAMMOTH\cristi.popa,2152127332,89276,0,7408,26,330937500,690781250,1417,29,1204965)	explorer.exe
+(\\MAMMOTH\cristi.popa,2152030236,41824,0,7756,15,3281250,4375000,705,28,1204964)	ShellExperienceHost.exe
+(\\MAMMOTH\cristi.popa,2152094424,49180,0,192,37,32500000,17656250,659,13,1204964)	SearchUI.exe
+(\\MAMMOTH\cristi.popa,2151771396,7728,0,5684,1,156250,468750,144,2,1204964)	RuntimeBroker.exe
+(\\MAMMOTH\cristi.popa,2151817652,17560,0,9436,5,8593750,20468750,287,1,1204964)	RuntimeBroker.exe
+(\\MAMMOTH\cristi.popa,2151815184,14924,0,8332,3,781250,3437500,347,11,1204963)	ctfmon.exe
+(\\MAMMOTH\cristi.popa,2185649596,27040,0,10016,8,2812500,3750000,424,7,1204959)	smartscreen.exe
+(\\MAMMOTH\cristi.popa,2151809636,12796,0,9668,2,6875000,14062500,224,1,1204957)	RuntimeBroker.exe
+(\\NT AUTHORITY\SYSTEM,2151915284,28628,0,3192,7,1406250,4062500,375,5,1204949)	LogonUI.exe
+(\\NT AUTHORITY\SYSTEM,2151763996,9132,0,9848,2,14531250,23906250,187,3,1204347)	svchost.exe
+(SYSTEM,2151792828,11828,0,6388,2,5156250,305781250,350,10,1192130)	csrss.exe
+(\\NT AUTHORITY\SYSTEM,2151776244,9880,0,9956,2,156250,4687500,270,2,1192130)	winlogon.exe
+(\\Font Driver Host\UMFD-5,2151778560,6760,0,4984,2,1718750,1875000,49,5,1192130)	fontdrvhost.exe
+(\\Window Manager\DWM-5,2151961660,70436,0,7892,26,395468750,657343750,650,13,1192130)	dwm.exe
+(\\MAMMOTH\axes,2151819108,12508,0,9932,3,5625000,143593750,310,5,1192128)	rdpclip.exe
+(\\MAMMOTH\axes,2151839284,25964,0,7576,5,63125000,81406250,452,8,1192128)	sihost.exe
+(\\MAMMOTH\axes,2151790084,14836,0,7864,3,9843750,11406250,269,3,1192128)	svchost.exe
+(\\MAMMOTH\axes,2151861992,30268,0,8988,6,15781250,19375000,397,2,1192128)	svchost.exe
+(\\MAMMOTH\axes,2152847560,14620,0,7980,4,2812500,8125000,232,4,1192128)	taskhostw.exe
+(\\MAMMOTH\axes,2152194184,113528,0,9948,37,517187500,1589687500,1542,31,1192128)	explorer.exe
+(\\MAMMOTH\axes,2152020968,58564,0,6348,18,19062500,30781250,765,12,1192127)	ShellExperienceHost.exe
+(\\MAMMOTH\axes,2186175180,80428,0,924,102,77343750,61875000,1339,34,1192127)	SearchUI.exe
+(\\MAMMOTH\axes,2151815228,17284,0,8484,2,312500,1562500,232,3,1192127)	RuntimeBroker.exe
+(\\MAMMOTH\axes,2151857440,25180,0,9944,8,25625000,53437500,422,5,1192127)	RuntimeBroker.exe
+(\\MAMMOTH\axes,2151814752,15612,0,3428,3,11250000,82812500,384,11,1192126)	ctfmon.exe
+(\\MAMMOTH\axes,2151810704,12840,0,8388,2,5937500,14375000,228,1,1192121)	RuntimeBroker.exe
+(\\MAMMOTH\axes,2185649528,27636,0,8016,8,2500000,4218750,423,7,1192116)	smartscreen.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151783224,18612,0,7256,4,35000000,38750000,271,5,1188163)	svchost.exe
+(\\NT AUTHORITY\SYSTEM,2153869908,10668,0,7080,6,20468750,33281250,188,4,1188163)	svchost.exe
+(SYSTEM,2151761736,11304,0,3664,2,13906250,14843750,238,4,611871)	SecurityHealthService.exe
+(\\NT AUTHORITY\SYSTEM,2152300980,41620,0,3668,27,66250000,139218750,859,10,340410)	taskhostw.exe
+(\\NT AUTHORITY\NETWORK SERVICE,2151817572,23560,0,3060,12,8868125000,5911406250,458,10,338046)	WmiPrvSE.exe
+(\\MAMMOTH\axes,2152840372,12100,0,9556,3,312500,1718750,214,5,337649)	dllhost.exe
+(\\MAMMOTH\axes,1172808,332936,0,9968,228,6764531250,8059062500,1943,29,337648)	Ssms.exe
+(\\MAMMOTH\axes,2151835760,19544,0,1360,5,156250,1093750,348,4,62442)	taskhostw.exe
+(\\MAMMOTH\axes,2151868936,24096,0,2780,6,16406250,88750000,265,2,58327)	perfmon.exe
+(\\MAMMOTH\axes,2151861756,22224,0,428,5,7343750,54062500,263,2,58147)	perfmon.exe
+(\\NT AUTHORITY\SYSTEM,2151914840,30108,0,7660,7,1406250,1562500,380,5,51807)	LogonUI.exe
+(\\NT AUTHORITY\LOCAL SERVICE,2151762044,14292,0,368,7,4687500,16093750,318,7,1575)	WmiPrvSE.exe
+(\\NT AUTHORITY\SYSTEM,4241268,1176,0,8208,0,0,156250,18,1,0)	check_mk_agent.exe
+(\\NT AUTHORITY\SYSTEM,2151732600,1832,0,936,0,0,0,28,2,0)	conhost.exe
+<<<>>>
+<<<windows_tasks:sep(58):encoding(cp437)>>>
+
+
+TaskName             : \CreateExplorerShellUnelevatedTask
+Last Run Time        : 3/2/2022 1:03:32 PM
+Next Run Time        : N/A
+Last Result          : 1073807364
+Scheduled Task State : Enabled
+
+TaskName             : \npcapwatchdog
+Last Run Time        : 2/21/2022 8:07:09 PM
+Next Run Time        : N/A
+Last Result          : 0
+Scheduled Task State : Enabled
+
+TaskName             : \User_Feed_Synchronization-{009E1DAB-14B2-4CC4-BA80-96889E76BC93}
+Last Run Time        : 3/8/2022 5:18:32 AM
+Next Run Time        : 3/8/2022 11:33:35 AM
+Last Result          : 0
+Scheduled Task State : Enabled
+
+TaskName             : \User_Feed_Synchronization-{4188A911-9ACC-426C-A80C-273998AB0631}
+Last Run Time        : 9/22/2021 6:47:38 PM
+Next Run Time        : 3/9/2022 12:15:01 AM
+Last Result          : 0
+Scheduled Task State : Enabled
+
+TaskName             : \User_Feed_Synchronization-{8BD6DCD3-A894-4B4D-9FE4-4FEFB2D321FC}
+Last Run Time        : 11/9/2021 9:19:38 PM
+Next Run Time        : 3/9/2022 3:26:47 AM
+Last Result          : 0
+Scheduled Task State : Enabled
+
+TaskName             : \User_Feed_Synchronization-{8C5B7894-BDD9-4515-905A-88A76413CC24}
+Last Run Time        : 2/21/2022 4:52:42 PM
+Next Run Time        : 3/8/2022 11:27:45 PM
+Last Result          : 0
+Scheduled Task State : Enabled
+
+TaskName             : \User_Feed_Synchronization-{B62B7EED-67DA-48A6-89E3-65D0DF176849}
+Last Run Time        : 9/17/2021 8:31:42 PM
+Next Run Time        : 3/9/2022 2:05:49 AM
+Last Result          : 0
+Scheduled Task State : Enabled
+
+TaskName             : \User_Feed_Synchronization-{C141A46B-D195-4621-939F-F2F4D11C3440}
+Last Run Time        : 10/20/2021 6:20:04 PM
+Next Run Time        : 3/8/2022 11:55:22 PM
+Last Result          : 0
+Scheduled Task State : Enabled
+
+TaskName             : \Mozilla\Firefox Background Update 308046B0AF4A39CB
+Last Run Time        : 2/21/2022 5:37:13 PM
+Next Run Time        : 3/8/2022 2:37:13 PM
+Last Result          : 0
+Scheduled Task State : Enabled
+
+TaskName             : \Mozilla\Firefox Default Browser Agent 308046B0AF4A39CB
+Last Run Time        : 2/21/2022 12:36:20 PM
+Next Run Time        : 3/8/2022 12:36:19 PM
+Last Result          : 0
+Scheduled Task State : Enabled
+
+
+
+
+<<<mssql_instance:sep(124):cached(1646726809,300)>>>
+<<<mssql_databases:sep(124):cached(1646726809,300)>>>
+<<<mssql_counters:sep(124):cached(1646726809,300)>>>
+<<<mssql_tablespaces:cached(1646726809,300)>>>
+<<<mssql_blocked_sessions:sep(124):cached(1646726809,300)>>>
+<<<mssql_backup:sep(124):cached(1646726809,300)>>>
+<<<mssql_transactionlogs:sep(124):cached(1646726809,300)>>>
+<<<mssql_datafiles:sep(124):cached(1646726809,300)>>>
+<<<mssql_cluster:sep(124):cached(1646726809,300)>>>
+<<<mssql_jobs:sep(09):cached(1646726809,300)>>>
+<<<mssql_versions:sep(124):cached(1646726809,300)>>>
+<<<mssql_connections:cached(1646726809,300)>>>
+<<<mssql_instance:sep(124):cached(1646726809,300)>>>
+<<<mssql_instance:sep(124):cached(1646726809,300)>>>
+MSSQL_MSSQLSERVER|config|15.0.2000.5|Standard Edition|
+<<<mssql_instance:sep(124):cached(1646726809,300)>>>
+MSSQL_MSSQLSERVERPROD|config|12.3.6024.0|Standard Edition|
+<<<mssql_instance:sep(124):cached(1646726809,300)>>>
+MSSQL_MSSQLSERVERPROD|state|1|Connecting using provider msoledbsql. 
+MSSQL_MSSQLSERVERPROD|details|12.0.6433.1|SP3|Standard Edition (64-bit)
+<<<mssql_counters:sep(124):cached(1646726809,300)>>>
+None|utc_time|None|3/8/2022 8:06:49 AM
+MSSQL_MSSQLSERVERPROD:Memory_Broker_Clerks|memory_broker_clerk_size|Buffer_Pool|9237964
+MSSQL_MSSQLSERVERPROD:Memory_Broker_Clerks|simulation_benefit|Buffer_Pool|0
+MSSQL_MSSQLSERVERPROD:Memory_Broker_Clerks|simulation_size|Buffer_Pool|1108992
+MSSQL_MSSQLSERVERPROD:Memory_Broker_Clerks|internal_benefit|Buffer_Pool|0
+MSSQL_MSSQLSERVERPROD:Memory_Broker_Clerks|periodic_evictions_(pages)|Buffer_Pool|0
+MSSQL_MSSQLSERVERPROD:Memory_Broker_Clerks|pressure_evictions_(pages/sec)|Buffer_Pool|0
+MSSQL_MSSQLSERVERPROD:Memory_Broker_Clerks|memory_broker_clerk_size|Column_store_object_pool|8
+MSSQL_MSSQLSERVERPROD:Memory_Broker_Clerks|simulation_benefit|Column_store_object_pool|0
+MSSQL_MSSQLSERVERPROD:Memory_Broker_Clerks|simulation_size|Column_store_object_pool|0
+MSSQL_MSSQLSERVERPROD:Memory_Broker_Clerks|internal_benefit|Column_store_object_pool|0
+MSSQL_MSSQLSERVERPROD:Memory_Broker_Clerks|periodic_evictions_(pages)|Column_store_object_pool|0
+MSSQL_MSSQLSERVERPROD:Memory_Broker_Clerks|pressure_evictions_(pages/sec)|Column_store_object_pool|0
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|buffer_cache_hit_ratio|None|200252
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|buffer_cache_hit_ratio_base|None|200253
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|page_lookups/sec|None|352460730369
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|free_list_stalls/sec|None|389
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|database_pages|None|9237964
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|target_pages|None|261980160
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|integral_controller_slope|None|0
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|lazy_writes/sec|None|581333
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|readahead_pages/sec|None|1197760624
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|readahead_time/sec|None|30988801184
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|page_reads/sec|None|1274113015
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|page_writes/sec|None|217074230
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|checkpoint_pages/sec|None|43832787
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|background_writer_pages/sec|None|0
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|page_life_expectancy|None|25915
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|extension_page_writes/sec|None|0
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|extension_page_reads/sec|None|0
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|extension_outstanding_io_counter|None|0
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|extension_page_evictions/sec|None|0
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|extension_allocated_pages|None|0
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|extension_free_pages|None|0
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|extension_in_use_as_percentage|None|0
+MSSQL_MSSQLSERVERPROD:Buffer_Manager|extension_page_unreferenced_time|None|0
+MSSQL_MSSQLSERVERPROD:Buffer_Node|database_pages|000|9237964
+MSSQL_MSSQLSERVERPROD:Buffer_Node|page_life_expectancy|000|25915
+MSSQL_MSSQLSERVERPROD:Buffer_Node|local_node_page_lookups/sec|000|0
+MSSQL_MSSQLSERVERPROD:Buffer_Node|remote_node_page_lookups/sec|000|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|active_temp_tables|None|937
+MSSQL_MSSQLSERVERPROD:General_Statistics|temp_tables_creation_rate|None|1438565
+MSSQL_MSSQLSERVERPROD:General_Statistics|logins/sec|None|1366066
+MSSQL_MSSQLSERVERPROD:General_Statistics|connection_reset/sec|None|177822243
+MSSQL_MSSQLSERVERPROD:General_Statistics|logouts/sec|None|1365961
+MSSQL_MSSQLSERVERPROD:General_Statistics|user_connections|None|105
+MSSQL_MSSQLSERVERPROD:General_Statistics|logical_connections|None|115
+MSSQL_MSSQLSERVERPROD:General_Statistics|transactions|None|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|non-atomic_yield_rate|None|64651386
+MSSQL_MSSQLSERVERPROD:General_Statistics|mars_deadlocks|None|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|http_authenticated_requests|None|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|soap_empty_requests|None|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|soap_sql_requests|None|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|soap_method_invocations|None|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|soap_wsdl_requests|None|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|soap_session_initiate_requests|None|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|soap_session_terminate_requests|None|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|processes_blocked|None|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|temp_tables_for_destruction|None|20
+MSSQL_MSSQLSERVERPROD:General_Statistics|event_notifications_delayed_drop|None|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|trace_event_notification_queue|None|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|sql_trace_io_provider_lock_waits|None|936
+MSSQL_MSSQLSERVERPROD:General_Statistics|tempdb_recovery_unit_id|None|0
+MSSQL_MSSQLSERVERPROD:General_Statistics|tempdb_rowset_id|None|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|RowGroup|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|RowGroup|0
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|RowGroup|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|RowGroup|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|RowGroup|0
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|RowGroup|0
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|RowGroup|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|RowGroup|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|OIB|19
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|OIB|0
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|OIB|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|OIB|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|OIB|0
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|OIB|0
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|OIB|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|OIB|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|AllocUnit|1219607
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|AllocUnit|0
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|AllocUnit|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|AllocUnit|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|AllocUnit|0
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|AllocUnit|0
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|AllocUnit|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|AllocUnit|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|HoBT|442940096
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|HoBT|0
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|HoBT|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|HoBT|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|HoBT|0
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|HoBT|0
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|HoBT|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|HoBT|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|Metadata|6783749988
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|Metadata|10035
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|Metadata|1
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|Metadata|3558
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|Metadata|2994992
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|Metadata|2994992
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|Metadata|3558
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|Metadata|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|Application|77133
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|Application|0
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|Application|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|Application|1153
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|Application|391245
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|Application|391245
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|Application|1153
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|Application|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|RID|239951955
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|RID|0
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|RID|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|RID|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|RID|0
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|RID|0
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|RID|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|RID|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|Extent|177966962
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|Extent|460292
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|Extent|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|Extent|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|Extent|0
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|Extent|0
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|Extent|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|Extent|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|Key|32227499330
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|Key|4192284
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|Key|171
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|Key|5461
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|Key|8382841
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|Key|8382841
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|Key|5461
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|Key|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|Page|9025576782
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|Page|3541390
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|Page|245
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|Page|4890
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|Page|10907022
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|Page|10907022
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|Page|4890
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|Page|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|Object|3239496264
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|Object|1226468
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|Object|37
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|Object|121846
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|Object|17626605
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|Object|17626605
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|Object|121846
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|Object|1
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|File|38764
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|File|0
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|File|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|File|16
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|File|24983
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|File|24983
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|File|16
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|File|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|Database|80416959
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|Database|19
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|Database|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|Database|12
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|Database|2769
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|Database|2769
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|Database|12
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|Database|0
+MSSQL_MSSQLSERVERPROD:Locks|lock_requests/sec|_Total|52218933859
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts/sec|_Total|9430488
+MSSQL_MSSQLSERVERPROD:Locks|number_of_deadlocks/sec|_Total|454
+MSSQL_MSSQLSERVERPROD:Locks|lock_waits/sec|_Total|136936
+MSSQL_MSSQLSERVERPROD:Locks|lock_wait_time_(ms)|_Total|40330457
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_(ms)|_Total|40330457
+MSSQL_MSSQLSERVERPROD:Locks|average_wait_time_base|_Total|136936
+MSSQL_MSSQLSERVERPROD:Locks|lock_timeouts_(timeout_>_0)/sec|_Total|1
+MSSQL_MSSQLSERVERPROD:Databases|data_file(s)_size_(kb)|tempdb|4055040
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_size_(kb)|tempdb|262648
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_used_size_(kb)|tempdb|42108
+MSSQL_MSSQLSERVERPROD:Databases|percent_log_used|tempdb|16
+MSSQL_MSSQLSERVERPROD:Databases|xtp_memory_used_(kb)|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|active_transactions|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|transactions/sec|tempdb|282416334
+MSSQL_MSSQLSERVERPROD:Databases|repl._pending_xacts|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|repl._trans._rate|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_reads/sec|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio_base|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_requests/sec|tempdb|17291
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_cache_misses/sec|tempdb|2
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_disk_reads/sec|tempdb|18
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_rows/sec|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_throughput/sec|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|backup/restore_throughput/sec|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|dbcc_logical_scan_bytes/sec|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|shrink_data_movement_bytes/sec|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flushes/sec|tempdb|2070555
+MSSQL_MSSQLSERVERPROD:Databases|log_bytes_flushed/sec|tempdb|126884458496
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_waits/sec|tempdb|948
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_wait_time|tempdb|11085
+MSSQL_MSSQLSERVERPROD:Databases|group_commit_time/sec|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_write_time_(ms)|tempdb|6187143
+MSSQL_MSSQLSERVERPROD:Databases|log_truncations|tempdb|1855
+MSSQL_MSSQLSERVERPROD:Databases|log_growths|tempdb|4
+MSSQL_MSSQLSERVERPROD:Databases|log_shrinks|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|tracked_transactions/sec|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|write_transactions/sec|tempdb|131063815
+MSSQL_MSSQLSERVERPROD:Databases|commit_table_entries|tempdb|0
+MSSQL_MSSQLSERVERPROD:Databases|data_file(s)_size_(kb)|model|3264
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_size_(kb)|model|4664
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_used_size_(kb)|model|4664
+MSSQL_MSSQLSERVERPROD:Databases|percent_log_used|model|100
+MSSQL_MSSQLSERVERPROD:Databases|xtp_memory_used_(kb)|model|0
+MSSQL_MSSQLSERVERPROD:Databases|active_transactions|model|0
+MSSQL_MSSQLSERVERPROD:Databases|transactions/sec|model|6327
+MSSQL_MSSQLSERVERPROD:Databases|repl._pending_xacts|model|0
+MSSQL_MSSQLSERVERPROD:Databases|repl._trans._rate|model|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_reads/sec|model|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio|model|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio_base|model|0
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_requests/sec|model|96
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_cache_misses/sec|model|16
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_disk_reads/sec|model|17
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_rows/sec|model|0
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_throughput/sec|model|0
+MSSQL_MSSQLSERVERPROD:Databases|backup/restore_throughput/sec|model|37173248
+MSSQL_MSSQLSERVERPROD:Databases|dbcc_logical_scan_bytes/sec|model|54894592
+MSSQL_MSSQLSERVERPROD:Databases|shrink_data_movement_bytes/sec|model|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flushes/sec|model|254
+MSSQL_MSSQLSERVERPROD:Databases|log_bytes_flushed/sec|model|347136
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_waits/sec|model|254
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_wait_time|model|759
+MSSQL_MSSQLSERVERPROD:Databases|group_commit_time/sec|model|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_write_time_(ms)|model|95
+MSSQL_MSSQLSERVERPROD:Databases|log_truncations|model|0
+MSSQL_MSSQLSERVERPROD:Databases|log_growths|model|0
+MSSQL_MSSQLSERVERPROD:Databases|log_shrinks|model|0
+MSSQL_MSSQLSERVERPROD:Databases|tracked_transactions/sec|model|0
+MSSQL_MSSQLSERVERPROD:Databases|write_transactions/sec|model|45
+MSSQL_MSSQLSERVERPROD:Databases|commit_table_entries|model|0
+MSSQL_MSSQLSERVERPROD:Databases|data_file(s)_size_(kb)|ReportServer$MSSQLSERVERPRODTempDB|4288
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_size_(kb)|ReportServer$MSSQLSERVERPRODTempDB|1080
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_used_size_(kb)|ReportServer$MSSQLSERVERPRODTempDB|521
+MSSQL_MSSQLSERVERPROD:Databases|percent_log_used|ReportServer$MSSQLSERVERPRODTempDB|48
+MSSQL_MSSQLSERVERPROD:Databases|xtp_memory_used_(kb)|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|active_transactions|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|transactions/sec|ReportServer$MSSQLSERVERPRODTempDB|25639
+MSSQL_MSSQLSERVERPROD:Databases|repl._pending_xacts|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|repl._trans._rate|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_reads/sec|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio_base|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_requests/sec|ReportServer$MSSQLSERVERPRODTempDB|96
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_cache_misses/sec|ReportServer$MSSQLSERVERPRODTempDB|16
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_disk_reads/sec|ReportServer$MSSQLSERVERPRODTempDB|17
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_rows/sec|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_throughput/sec|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|backup/restore_throughput/sec|ReportServer$MSSQLSERVERPRODTempDB|15180800
+MSSQL_MSSQLSERVERPROD:Databases|dbcc_logical_scan_bytes/sec|ReportServer$MSSQLSERVERPRODTempDB|59596800
+MSSQL_MSSQLSERVERPROD:Databases|shrink_data_movement_bytes/sec|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flushes/sec|ReportServer$MSSQLSERVERPRODTempDB|875
+MSSQL_MSSQLSERVERPROD:Databases|log_bytes_flushed/sec|ReportServer$MSSQLSERVERPRODTempDB|527872
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_waits/sec|ReportServer$MSSQLSERVERPRODTempDB|873
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_wait_time|ReportServer$MSSQLSERVERPRODTempDB|1020
+MSSQL_MSSQLSERVERPROD:Databases|group_commit_time/sec|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_write_time_(ms)|ReportServer$MSSQLSERVERPRODTempDB|727
+MSSQL_MSSQLSERVERPROD:Databases|log_truncations|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|log_growths|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|log_shrinks|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|tracked_transactions/sec|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|write_transactions/sec|ReportServer$MSSQLSERVERPRODTempDB|722
+MSSQL_MSSQLSERVERPROD:Databases|commit_table_entries|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Databases|data_file(s)_size_(kb)|ReportServer$MSSQLSERVERPROD|5312
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_size_(kb)|ReportServer$MSSQLSERVERPROD|7032
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_used_size_(kb)|ReportServer$MSSQLSERVERPROD|935
+MSSQL_MSSQLSERVERPROD:Databases|percent_log_used|ReportServer$MSSQLSERVERPROD|13
+MSSQL_MSSQLSERVERPROD:Databases|xtp_memory_used_(kb)|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|active_transactions|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|transactions/sec|ReportServer$MSSQLSERVERPROD|314522
+MSSQL_MSSQLSERVERPROD:Databases|repl._pending_xacts|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|repl._trans._rate|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_reads/sec|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio_base|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_requests/sec|ReportServer$MSSQLSERVERPROD|96
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_cache_misses/sec|ReportServer$MSSQLSERVERPROD|16
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_disk_reads/sec|ReportServer$MSSQLSERVERPROD|17
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_rows/sec|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_throughput/sec|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|backup/restore_throughput/sec|ReportServer$MSSQLSERVERPROD|166775808
+MSSQL_MSSQLSERVERPROD:Databases|dbcc_logical_scan_bytes/sec|ReportServer$MSSQLSERVERPROD|95109120
+MSSQL_MSSQLSERVERPROD:Databases|shrink_data_movement_bytes/sec|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flushes/sec|ReportServer$MSSQLSERVERPROD|2983
+MSSQL_MSSQLSERVERPROD:Databases|log_bytes_flushed/sec|ReportServer$MSSQLSERVERPROD|2339328
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_waits/sec|ReportServer$MSSQLSERVERPROD|2976
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_wait_time|ReportServer$MSSQLSERVERPROD|3776
+MSSQL_MSSQLSERVERPROD:Databases|group_commit_time/sec|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_write_time_(ms)|ReportServer$MSSQLSERVERPROD|2976
+MSSQL_MSSQLSERVERPROD:Databases|log_truncations|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|log_growths|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|log_shrinks|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|tracked_transactions/sec|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|write_transactions/sec|ReportServer$MSSQLSERVERPROD|2115
+MSSQL_MSSQLSERVERPROD:Databases|commit_table_entries|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Databases|data_file(s)_size_(kb)|mssqlsystemresource|40960
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_size_(kb)|mssqlsystemresource|1272
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_used_size_(kb)|mssqlsystemresource|500
+MSSQL_MSSQLSERVERPROD:Databases|percent_log_used|mssqlsystemresource|39
+MSSQL_MSSQLSERVERPROD:Databases|xtp_memory_used_(kb)|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|active_transactions|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|transactions/sec|mssqlsystemresource|1985546
+MSSQL_MSSQLSERVERPROD:Databases|repl._pending_xacts|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|repl._trans._rate|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_reads/sec|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio_base|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_requests/sec|mssqlsystemresource|6
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_cache_misses/sec|mssqlsystemresource|1
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_disk_reads/sec|mssqlsystemresource|2
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_rows/sec|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_throughput/sec|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|backup/restore_throughput/sec|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|dbcc_logical_scan_bytes/sec|mssqlsystemresource|474685440
+MSSQL_MSSQLSERVERPROD:Databases|shrink_data_movement_bytes/sec|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flushes/sec|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|log_bytes_flushed/sec|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_waits/sec|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_wait_time|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|group_commit_time/sec|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_write_time_(ms)|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|log_truncations|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|log_growths|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|log_shrinks|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|tracked_transactions/sec|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|write_transactions/sec|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|commit_table_entries|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Databases|data_file(s)_size_(kb)|xTrackWMS|348749824
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_size_(kb)|xTrackWMS|38028280
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_used_size_(kb)|xTrackWMS|80207
+MSSQL_MSSQLSERVERPROD:Databases|percent_log_used|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|xtp_memory_used_(kb)|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|active_transactions|xTrackWMS|1
+MSSQL_MSSQLSERVERPROD:Databases|transactions/sec|xTrackWMS|183126599
+MSSQL_MSSQLSERVERPROD:Databases|repl._pending_xacts|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|repl._trans._rate|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_reads/sec|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio_base|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_requests/sec|xTrackWMS|422791
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_cache_misses/sec|xTrackWMS|13811
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_disk_reads/sec|xTrackWMS|61484
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_rows/sec|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_throughput/sec|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|backup/restore_throughput/sec|xTrackWMS|2100930174976
+MSSQL_MSSQLSERVERPROD:Databases|dbcc_logical_scan_bytes/sec|xTrackWMS|5594159472640
+MSSQL_MSSQLSERVERPROD:Databases|shrink_data_movement_bytes/sec|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flushes/sec|xTrackWMS|80270447
+MSSQL_MSSQLSERVERPROD:Databases|log_bytes_flushed/sec|xTrackWMS|324295035904
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_waits/sec|xTrackWMS|78111932
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_wait_time|xTrackWMS|102554062
+MSSQL_MSSQLSERVERPROD:Databases|group_commit_time/sec|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_write_time_(ms)|xTrackWMS|76952911
+MSSQL_MSSQLSERVERPROD:Databases|log_truncations|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|log_growths|xTrackWMS|16
+MSSQL_MSSQLSERVERPROD:Databases|log_shrinks|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|tracked_transactions/sec|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|write_transactions/sec|xTrackWMS|78063876
+MSSQL_MSSQLSERVERPROD:Databases|commit_table_entries|xTrackWMS|0
+MSSQL_MSSQLSERVERPROD:Databases|data_file(s)_size_(kb)|msdb|886784
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_size_(kb)|msdb|164664
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_used_size_(kb)|msdb|11776
+MSSQL_MSSQLSERVERPROD:Databases|percent_log_used|msdb|7
+MSSQL_MSSQLSERVERPROD:Databases|xtp_memory_used_(kb)|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|active_transactions|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|transactions/sec|msdb|4184403
+MSSQL_MSSQLSERVERPROD:Databases|repl._pending_xacts|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|repl._trans._rate|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_reads/sec|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio_base|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_requests/sec|msdb|531
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_cache_misses/sec|msdb|8
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_disk_reads/sec|msdb|63
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_rows/sec|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_throughput/sec|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|backup/restore_throughput/sec|msdb|10844655616
+MSSQL_MSSQLSERVERPROD:Databases|dbcc_logical_scan_bytes/sec|msdb|10463789056
+MSSQL_MSSQLSERVERPROD:Databases|shrink_data_movement_bytes/sec|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flushes/sec|msdb|2974056
+MSSQL_MSSQLSERVERPROD:Databases|log_bytes_flushed/sec|msdb|2803103232
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_waits/sec|msdb|2999483
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_wait_time|msdb|2787859
+MSSQL_MSSQLSERVERPROD:Databases|group_commit_time/sec|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_write_time_(ms)|msdb|1942661
+MSSQL_MSSQLSERVERPROD:Databases|log_truncations|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_growths|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|log_shrinks|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|tracked_transactions/sec|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|write_transactions/sec|msdb|2998482
+MSSQL_MSSQLSERVERPROD:Databases|commit_table_entries|msdb|0
+MSSQL_MSSQLSERVERPROD:Databases|data_file(s)_size_(kb)|MAMMOTHMailer|32014976
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_size_(kb)|MAMMOTHMailer|568888
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_used_size_(kb)|MAMMOTHMailer|27789
+MSSQL_MSSQLSERVERPROD:Databases|percent_log_used|MAMMOTHMailer|4
+MSSQL_MSSQLSERVERPROD:Databases|xtp_memory_used_(kb)|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|active_transactions|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|transactions/sec|MAMMOTHMailer|136909
+MSSQL_MSSQLSERVERPROD:Databases|repl._pending_xacts|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|repl._trans._rate|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_reads/sec|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio_base|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_requests/sec|MAMMOTHMailer|291
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_cache_misses/sec|MAMMOTHMailer|2
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_disk_reads/sec|MAMMOTHMailer|3
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_rows/sec|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_throughput/sec|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|backup/restore_throughput/sec|MAMMOTHMailer|166464185344
+MSSQL_MSSQLSERVERPROD:Databases|dbcc_logical_scan_bytes/sec|MAMMOTHMailer|488438341632
+MSSQL_MSSQLSERVERPROD:Databases|shrink_data_movement_bytes/sec|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flushes/sec|MAMMOTHMailer|86091
+MSSQL_MSSQLSERVERPROD:Databases|log_bytes_flushed/sec|MAMMOTHMailer|4047055360
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_waits/sec|MAMMOTHMailer|28495
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_wait_time|MAMMOTHMailer|67549
+MSSQL_MSSQLSERVERPROD:Databases|group_commit_time/sec|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_write_time_(ms)|MAMMOTHMailer|172007
+MSSQL_MSSQLSERVERPROD:Databases|log_truncations|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|log_growths|MAMMOTHMailer|1
+MSSQL_MSSQLSERVERPROD:Databases|log_shrinks|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|tracked_transactions/sec|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|write_transactions/sec|MAMMOTHMailer|27188
+MSSQL_MSSQLSERVERPROD:Databases|commit_table_entries|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Databases|data_file(s)_size_(kb)|xTrackWMS_ARCHIVE|166347776
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_size_(kb)|xTrackWMS_ARCHIVE|3480440
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_used_size_(kb)|xTrackWMS_ARCHIVE|96424
+MSSQL_MSSQLSERVERPROD:Databases|percent_log_used|xTrackWMS_ARCHIVE|2
+MSSQL_MSSQLSERVERPROD:Databases|xtp_memory_used_(kb)|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|active_transactions|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|transactions/sec|xTrackWMS_ARCHIVE|17740
+MSSQL_MSSQLSERVERPROD:Databases|repl._pending_xacts|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|repl._trans._rate|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_reads/sec|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio_base|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_requests/sec|xTrackWMS_ARCHIVE|96
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_cache_misses/sec|xTrackWMS_ARCHIVE|16
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_disk_reads/sec|xTrackWMS_ARCHIVE|17
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_rows/sec|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_throughput/sec|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|backup/restore_throughput/sec|xTrackWMS_ARCHIVE|733062594560
+MSSQL_MSSQLSERVERPROD:Databases|dbcc_logical_scan_bytes/sec|xTrackWMS_ARCHIVE|2200567111680
+MSSQL_MSSQLSERVERPROD:Databases|shrink_data_movement_bytes/sec|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flushes/sec|xTrackWMS_ARCHIVE|2941
+MSSQL_MSSQLSERVERPROD:Databases|log_bytes_flushed/sec|xTrackWMS_ARCHIVE|2291200
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_waits/sec|xTrackWMS_ARCHIVE|2941
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_wait_time|xTrackWMS_ARCHIVE|2197
+MSSQL_MSSQLSERVERPROD:Databases|group_commit_time/sec|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_write_time_(ms)|xTrackWMS_ARCHIVE|1667
+MSSQL_MSSQLSERVERPROD:Databases|log_truncations|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|log_growths|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|log_shrinks|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|tracked_transactions/sec|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|write_transactions/sec|xTrackWMS_ARCHIVE|2114
+MSSQL_MSSQLSERVERPROD:Databases|commit_table_entries|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Databases|data_file(s)_size_(kb)|DBA|20276224
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_size_(kb)|DBA|1108792
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_used_size_(kb)|DBA|37540
+MSSQL_MSSQLSERVERPROD:Databases|percent_log_used|DBA|3
+MSSQL_MSSQLSERVERPROD:Databases|xtp_memory_used_(kb)|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|active_transactions|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|transactions/sec|DBA|572582
+MSSQL_MSSQLSERVERPROD:Databases|repl._pending_xacts|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|repl._trans._rate|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_reads/sec|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio_base|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_requests/sec|DBA|142
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_cache_misses/sec|DBA|1
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_disk_reads/sec|DBA|2
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_rows/sec|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_throughput/sec|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|backup/restore_throughput/sec|DBA|102863855616
+MSSQL_MSSQLSERVERPROD:Databases|dbcc_logical_scan_bytes/sec|DBA|367719931904
+MSSQL_MSSQLSERVERPROD:Databases|shrink_data_movement_bytes/sec|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flushes/sec|DBA|515520
+MSSQL_MSSQLSERVERPROD:Databases|log_bytes_flushed/sec|DBA|25955107840
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_waits/sec|DBA|178087
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_wait_time|DBA|441070
+MSSQL_MSSQLSERVERPROD:Databases|group_commit_time/sec|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_write_time_(ms)|DBA|1445903
+MSSQL_MSSQLSERVERPROD:Databases|log_truncations|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|log_growths|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|log_shrinks|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|tracked_transactions/sec|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|write_transactions/sec|DBA|171112
+MSSQL_MSSQLSERVERPROD:Databases|commit_table_entries|DBA|0
+MSSQL_MSSQLSERVERPROD:Databases|data_file(s)_size_(kb)|_Total|572415936
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_size_(kb)|_Total|43634024
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_used_size_(kb)|_Total|305412
+MSSQL_MSSQLSERVERPROD:Databases|percent_log_used|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|xtp_memory_used_(kb)|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|active_transactions|_Total|1
+MSSQL_MSSQLSERVERPROD:Databases|transactions/sec|_Total|473140676
+MSSQL_MSSQLSERVERPROD:Databases|repl._pending_xacts|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|repl._trans._rate|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_reads/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio_base|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_requests/sec|_Total|442240
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_cache_misses/sec|_Total|13892
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_disk_reads/sec|_Total|61646
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_rows/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_throughput/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|backup/restore_throughput/sec|_Total|3114826430464
+MSSQL_MSSQLSERVERPROD:Databases|dbcc_logical_scan_bytes/sec|_Total|8662524993536
+MSSQL_MSSQLSERVERPROD:Databases|shrink_data_movement_bytes/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flushes/sec|_Total|85984684
+MSSQL_MSSQLSERVERPROD:Databases|log_bytes_flushed/sec|_Total|484069373440
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_waits/sec|_Total|81386467
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_wait_time|_Total|105934018
+MSSQL_MSSQLSERVERPROD:Databases|group_commit_time/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_write_time_(ms)|_Total|86748511
+MSSQL_MSSQLSERVERPROD:Databases|log_truncations|_Total|1870
+MSSQL_MSSQLSERVERPROD:Databases|log_growths|_Total|22
+MSSQL_MSSQLSERVERPROD:Databases|log_shrinks|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|tracked_transactions/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|write_transactions/sec|_Total|212389750
+MSSQL_MSSQLSERVERPROD:Databases|commit_table_entries|_Total|0
+MSSQL_MSSQLSERVERPROD:Databases|data_file(s)_size_(kb)|master|31488
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_size_(kb)|master|6264
+MSSQL_MSSQLSERVERPROD:Databases|log_file(s)_used_size_(kb)|master|2946
+MSSQL_MSSQLSERVERPROD:Databases|percent_log_used|master|47
+MSSQL_MSSQLSERVERPROD:Databases|xtp_memory_used_(kb)|master|0
+MSSQL_MSSQLSERVERPROD:Databases|active_transactions|master|0
+MSSQL_MSSQLSERVERPROD:Databases|transactions/sec|master|353981
+MSSQL_MSSQLSERVERPROD:Databases|repl._pending_xacts|master|0
+MSSQL_MSSQLSERVERPROD:Databases|repl._trans._rate|master|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_reads/sec|master|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio|master|0
+MSSQL_MSSQLSERVERPROD:Databases|log_cache_hit_ratio_base|master|0
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_requests/sec|master|804
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_cache_misses/sec|master|3
+MSSQL_MSSQLSERVERPROD:Databases|log_pool_disk_reads/sec|master|6
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_rows/sec|master|0
+MSSQL_MSSQLSERVERPROD:Databases|bulk_copy_throughput/sec|master|0
+MSSQL_MSSQLSERVERPROD:Databases|backup/restore_throughput/sec|master|441834496
+MSSQL_MSSQLSERVERPROD:Databases|dbcc_logical_scan_bytes/sec|master|492060672
+MSSQL_MSSQLSERVERPROD:Databases|shrink_data_movement_bytes/sec|master|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flushes/sec|master|60955
+MSSQL_MSSQLSERVERPROD:Databases|log_bytes_flushed/sec|master|79103488
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_waits/sec|master|60471
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_wait_time|master|64637
+MSSQL_MSSQLSERVERPROD:Databases|group_commit_time/sec|master|0
+MSSQL_MSSQLSERVERPROD:Databases|log_flush_write_time_(ms)|master|42417
+MSSQL_MSSQLSERVERPROD:Databases|log_truncations|master|15
+MSSQL_MSSQLSERVERPROD:Databases|log_growths|master|1
+MSSQL_MSSQLSERVERPROD:Databases|log_shrinks|master|0
+MSSQL_MSSQLSERVERPROD:Databases|tracked_transactions/sec|master|0
+MSSQL_MSSQLSERVERPROD:Databases|write_transactions/sec|master|60243
+MSSQL_MSSQLSERVERPROD:Databases|commit_table_entries|master|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|recovery_queue|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|redone_bytes/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|redones/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|log_send_queue|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|log_bytes_received/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|file_bytes_received/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|mirrored_write_transactions/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|transaction_delay|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|group_commit_time|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|group_commits/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|log_bytes_compressed/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|log_compressions/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|log_compression_cache_misses/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|log_compression_cache_hits/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|log_bytes_decompressed/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|log_decompressions/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|database_flow_control_delay|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|database_flow_controls/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|total_log_requiring_undo|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|log_remaining_for_undo|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|redo_bytes_remaining|_Total|0
+MSSQL_MSSQLSERVERPROD:Database_Replica|redo_blocked/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Availability_Replica|bytes_sent_to_replica/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Availability_Replica|sends_to_replica/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Availability_Replica|bytes_sent_to_transport/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Availability_Replica|sends_to_transport/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Availability_Replica|bytes_received_from_replica/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Availability_Replica|receives_from_replica/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Availability_Replica|flow_control_time_(ms/sec)|_Total|0
+MSSQL_MSSQLSERVERPROD:Availability_Replica|flow_control/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Availability_Replica|resent_messages/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Latches|latch_waits/sec|None|198068741
+MSSQL_MSSQLSERVERPROD:Latches|average_latch_wait_time_(ms)|None|78157616
+MSSQL_MSSQLSERVERPROD:Latches|average_latch_wait_time_base|None|198068742
+MSSQL_MSSQLSERVERPROD:Latches|total_latch_wait_time_(ms)|None|78157616
+MSSQL_MSSQLSERVERPROD:Latches|number_of_superlatches|None|0
+MSSQL_MSSQLSERVERPROD:Latches|superlatch_promotions/sec|None|0
+MSSQL_MSSQLSERVERPROD:Latches|superlatch_demotions/sec|None|0
+MSSQL_MSSQLSERVERPROD:Access_Methods|full_scans/sec|None|351895354
+MSSQL_MSSQLSERVERPROD:Access_Methods|range_scans/sec|None|8045865933
+MSSQL_MSSQLSERVERPROD:Access_Methods|probe_scans/sec|None|35697963551
+MSSQL_MSSQLSERVERPROD:Access_Methods|scan_point_revalidations/sec|None|34827482
+MSSQL_MSSQLSERVERPROD:Access_Methods|workfiles_created/sec|None|236346332
+MSSQL_MSSQLSERVERPROD:Access_Methods|worktables_created/sec|None|54191048
+MSSQL_MSSQLSERVERPROD:Access_Methods|worktables_from_cache_ratio|None|1841066
+MSSQL_MSSQLSERVERPROD:Access_Methods|worktables_from_cache_base|None|1930048
+MSSQL_MSSQLSERVERPROD:Access_Methods|forwarded_records/sec|None|32709846
+MSSQL_MSSQLSERVERPROD:Access_Methods|skipped_ghosted_records/sec|None|186621579
+MSSQL_MSSQLSERVERPROD:Access_Methods|index_searches/sec|None|47228012188
+MSSQL_MSSQLSERVERPROD:Access_Methods|freespace_scans/sec|None|114517548
+MSSQL_MSSQLSERVERPROD:Access_Methods|freespace_page_fetches/sec|None|114859697
+MSSQL_MSSQLSERVERPROD:Access_Methods|pages_allocated/sec|None|297017043
+MSSQL_MSSQLSERVERPROD:Access_Methods|extents_allocated/sec|None|28336918
+MSSQL_MSSQLSERVERPROD:Access_Methods|mixed_page_allocations/sec|None|14233646
+MSSQL_MSSQLSERVERPROD:Access_Methods|extent_deallocations/sec|None|34864378
+MSSQL_MSSQLSERVERPROD:Access_Methods|page_deallocations/sec|None|295105051
+MSSQL_MSSQLSERVERPROD:Access_Methods|page_splits/sec|None|21866015
+MSSQL_MSSQLSERVERPROD:Access_Methods|table_lock_escalations/sec|None|127087
+MSSQL_MSSQLSERVERPROD:Access_Methods|deferred_dropped_rowsets|None|0
+MSSQL_MSSQLSERVERPROD:Access_Methods|dropped_rowset_cleanups/sec|None|0
+MSSQL_MSSQLSERVERPROD:Access_Methods|dropped_rowsets_skipped/sec|None|0
+MSSQL_MSSQLSERVERPROD:Access_Methods|deferred_dropped_aus|None|0
+MSSQL_MSSQLSERVERPROD:Access_Methods|au_cleanups/sec|None|7210
+MSSQL_MSSQLSERVERPROD:Access_Methods|au_cleanup_batches/sec|None|35835
+MSSQL_MSSQLSERVERPROD:Access_Methods|failed_au_cleanup_batches/sec|None|0
+MSSQL_MSSQLSERVERPROD:Access_Methods|used_tree_page_cookie|None|8659056
+MSSQL_MSSQLSERVERPROD:Access_Methods|failed_tree_page_cookie|None|13417
+MSSQL_MSSQLSERVERPROD:Access_Methods|used_leaf_page_cookie|None|1818260522
+MSSQL_MSSQLSERVERPROD:Access_Methods|failed_leaf_page_cookie|None|16228
+MSSQL_MSSQLSERVERPROD:Access_Methods|lobss_provider_create_count|None|8737343
+MSSQL_MSSQLSERVERPROD:Access_Methods|lobss_provider_destroy_count|None|8737313
+MSSQL_MSSQLSERVERPROD:Access_Methods|lobss_provider_truncation_count|None|61087
+MSSQL_MSSQLSERVERPROD:Access_Methods|lobhandle_create_count|None|3184388
+MSSQL_MSSQLSERVERPROD:Access_Methods|lobhandle_destroy_count|None|1001757
+MSSQL_MSSQLSERVERPROD:Access_Methods|by-reference_lob_create_count|None|129037
+MSSQL_MSSQLSERVERPROD:Access_Methods|by-reference_lob_use_count|None|129037
+MSSQL_MSSQLSERVERPROD:Access_Methods|count_push_off_row|None|96512
+MSSQL_MSSQLSERVERPROD:Access_Methods|count_pull_in_row|None|0
+MSSQL_MSSQLSERVERPROD:Access_Methods|count_lob_readahead|None|167161869
+MSSQL_MSSQLSERVERPROD:Access_Methods|page_compression_attempts/sec|None|0
+MSSQL_MSSQLSERVERPROD:Access_Methods|pages_compressed/sec|None|0
+MSSQL_MSSQLSERVERPROD:Access_Methods|insysxact_waits/sec|None|0
+MSSQL_MSSQLSERVERPROD:SQL_Errors|errors/sec|DB_Offline_Errors|0
+MSSQL_MSSQLSERVERPROD:SQL_Errors|errors/sec|Kill_Connection_Errors|0
+MSSQL_MSSQLSERVERPROD:SQL_Errors|errors/sec|User_Errors|1559893
+MSSQL_MSSQLSERVERPROD:SQL_Errors|errors/sec|Info_Errors|4514040
+MSSQL_MSSQLSERVERPROD:SQL_Errors|errors/sec|_Total|6073933
+MSSQL_MSSQLSERVERPROD:SQL_Statistics|batch_requests/sec|None|188849205
+MSSQL_MSSQLSERVERPROD:SQL_Statistics|forced_parameterizations/sec|None|225890
+MSSQL_MSSQLSERVERPROD:SQL_Statistics|auto-param_attempts/sec|None|40139
+MSSQL_MSSQLSERVERPROD:SQL_Statistics|failed_auto-params/sec|None|18134
+MSSQL_MSSQLSERVERPROD:SQL_Statistics|safe_auto-params/sec|None|20742
+MSSQL_MSSQLSERVERPROD:SQL_Statistics|unsafe_auto-params/sec|None|1263
+MSSQL_MSSQLSERVERPROD:SQL_Statistics|sql_compilations/sec|None|8447925
+MSSQL_MSSQLSERVERPROD:SQL_Statistics|sql_re-compilations/sec|None|2440360
+MSSQL_MSSQLSERVERPROD:SQL_Statistics|sql_attention_rate|None|20655
+MSSQL_MSSQLSERVERPROD:SQL_Statistics|guided_plan_executions/sec|None|0
+MSSQL_MSSQLSERVERPROD:SQL_Statistics|misguided_plan_executions/sec|None|0
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_hit_ratio|Temporary_Tables_&_Table_Variables|548
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_hit_ratio_base|Temporary_Tables_&_Table_Variables|560
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_pages|Temporary_Tables_&_Table_Variables|110
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_object_counts|Temporary_Tables_&_Table_Variables|915
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_objects_in_use|Temporary_Tables_&_Table_Variables|38
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_hit_ratio|Extended_Stored_Procedures|880
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_hit_ratio_base|Extended_Stored_Procedures|880
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_pages|Extended_Stored_Procedures|26
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_object_counts|Extended_Stored_Procedures|24
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_objects_in_use|Extended_Stored_Procedures|1
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_hit_ratio|Bound_Trees|732
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_hit_ratio_base|Bound_Trees|740
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_pages|Bound_Trees|20097
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_object_counts|Bound_Trees|1006
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_objects_in_use|Bound_Trees|0
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_hit_ratio|SQL_Plans|541
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_hit_ratio_base|SQL_Plans|554
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_pages|SQL_Plans|833859
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_object_counts|SQL_Plans|160013
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_objects_in_use|SQL_Plans|1135
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_hit_ratio|Object_Plans|910
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_hit_ratio_base|Object_Plans|910
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_pages|Object_Plans|74484
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_object_counts|Object_Plans|470
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_objects_in_use|Object_Plans|4
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_hit_ratio|_Total|3611
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_hit_ratio_base|_Total|3644
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_pages|_Total|928576
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_object_counts|_Total|162428
+MSSQL_MSSQLSERVERPROD:Plan_Cache|cache_objects_in_use|_Total|1178
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cache_hit_ratio|TSQL_Local_Cursor|596
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cache_hit_ratio_base|TSQL_Local_Cursor|604
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cached_cursor_counts|TSQL_Local_Cursor|16
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_cache_use_counts/sec|TSQL_Local_Cursor|11246
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_requests/sec|TSQL_Local_Cursor|11612
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|active_cursors|TSQL_Local_Cursor|0
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_memory_usage|TSQL_Local_Cursor|936
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_worktable_usage|TSQL_Local_Cursor|8
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|number_of_active_cursor_plans|TSQL_Local_Cursor|16
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cache_hit_ratio|TSQL_Global_Cursor|642
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cache_hit_ratio_base|TSQL_Global_Cursor|642
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cached_cursor_counts|TSQL_Global_Cursor|8
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_cache_use_counts/sec|TSQL_Global_Cursor|30771
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_requests/sec|TSQL_Global_Cursor|30779
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|active_cursors|TSQL_Global_Cursor|0
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_memory_usage|TSQL_Global_Cursor|280
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_worktable_usage|TSQL_Global_Cursor|3
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|number_of_active_cursor_plans|TSQL_Global_Cursor|8
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cache_hit_ratio|API_Cursor|20
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cache_hit_ratio_base|API_Cursor|29
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cached_cursor_counts|API_Cursor|9
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_cache_use_counts/sec|API_Cursor|20
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_requests/sec|API_Cursor|29
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|active_cursors|API_Cursor|0
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_memory_usage|API_Cursor|1088
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_worktable_usage|API_Cursor|9
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|number_of_active_cursor_plans|API_Cursor|9
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cache_hit_ratio|_Total|1258
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cache_hit_ratio_base|_Total|1275
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cached_cursor_counts|_Total|33
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_cache_use_counts/sec|_Total|42037
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_requests/sec|_Total|42420
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|active_cursors|_Total|0
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_memory_usage|_Total|2304
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|cursor_worktable_usage|_Total|20
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_by_Type|number_of_active_cursor_plans|_Total|33
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_Total|cursor_conversion_rate|None|10
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_Total|async_population_count|None|0
+MSSQL_MSSQLSERVERPROD:Cursor_Manager_Total|cursor_flushes|None|12
+MSSQL_MSSQLSERVERPROD:Memory_Manager|external_benefit_of_memory|None|0
+MSSQL_MSSQLSERVERPROD:Memory_Manager|connection_memory_(kb)|None|3992
+MSSQL_MSSQLSERVERPROD:Memory_Manager|database_cache_memory_(kb)|None|73903712
+MSSQL_MSSQLSERVERPROD:Memory_Manager|free_memory_(kb)|None|35358504
+MSSQL_MSSQLSERVERPROD:Memory_Manager|granted_workspace_memory_(kb)|None|0
+MSSQL_MSSQLSERVERPROD:Memory_Manager|lock_memory_(kb)|None|282032
+MSSQL_MSSQLSERVERPROD:Memory_Manager|lock_blocks_allocated|None|1203550
+MSSQL_MSSQLSERVERPROD:Memory_Manager|lock_owner_blocks_allocated|None|2050550
+MSSQL_MSSQLSERVERPROD:Memory_Manager|lock_blocks|None|11083
+MSSQL_MSSQLSERVERPROD:Memory_Manager|lock_owner_blocks|None|11196
+MSSQL_MSSQLSERVERPROD:Memory_Manager|maximum_workspace_memory_(kb)|None|92340000
+MSSQL_MSSQLSERVERPROD:Memory_Manager|memory_grants_outstanding|None|0
+MSSQL_MSSQLSERVERPROD:Memory_Manager|memory_grants_pending|None|0
+MSSQL_MSSQLSERVERPROD:Memory_Manager|optimizer_memory_(kb)|None|1464
+MSSQL_MSSQLSERVERPROD:Memory_Manager|reserved_server_memory_(kb)|None|0
+MSSQL_MSSQLSERVERPROD:Memory_Manager|sql_cache_memory_(kb)|None|200344
+MSSQL_MSSQLSERVERPROD:Memory_Manager|stolen_server_memory_(kb)|None|13474224
+MSSQL_MSSQLSERVERPROD:Memory_Manager|log_pool_memory_(kb)|None|8512
+MSSQL_MSSQLSERVERPROD:Memory_Manager|target_server_memory_(kb)|None|122880000
+MSSQL_MSSQLSERVERPROD:Memory_Manager|total_server_memory_(kb)|None|122736440
+MSSQL_MSSQLSERVERPROD:Memory_Node|database_node_memory_(kb)|000|73903712
+MSSQL_MSSQLSERVERPROD:Memory_Node|free_node_memory_(kb)|000|35358504
+MSSQL_MSSQLSERVERPROD:Memory_Node|foreign_node_memory_(kb)|000|0
+MSSQL_MSSQLSERVERPROD:Memory_Node|stolen_node_memory_(kb)|000|13474200
+MSSQL_MSSQLSERVERPROD:Memory_Node|target_node_memory_(kb)|000|122879976
+MSSQL_MSSQLSERVERPROD:Memory_Node|total_node_memory_(kb)|000|122736416
+MSSQL_MSSQLSERVERPROD:User_Settable|query|User_counter_10|0
+MSSQL_MSSQLSERVERPROD:User_Settable|query|User_counter_9|0
+MSSQL_MSSQLSERVERPROD:User_Settable|query|User_counter_8|0
+MSSQL_MSSQLSERVERPROD:User_Settable|query|User_counter_7|0
+MSSQL_MSSQLSERVERPROD:User_Settable|query|User_counter_6|0
+MSSQL_MSSQLSERVERPROD:User_Settable|query|User_counter_5|0
+MSSQL_MSSQLSERVERPROD:User_Settable|query|User_counter_4|0
+MSSQL_MSSQLSERVERPROD:User_Settable|query|User_counter_3|0
+MSSQL_MSSQLSERVERPROD:User_Settable|query|User_counter_2|0
+MSSQL_MSSQLSERVERPROD:User_Settable|query|User_counter_1|0
+MSSQL_MSSQLSERVERPROD:Transactions|transactions|None|36
+MSSQL_MSSQLSERVERPROD:Transactions|snapshot_transactions|None|0
+MSSQL_MSSQLSERVERPROD:Transactions|update_snapshot_transactions|None|0
+MSSQL_MSSQLSERVERPROD:Transactions|nonsnapshot_version_transactions|None|0
+MSSQL_MSSQLSERVERPROD:Transactions|longest_transaction_running_time|None|0
+MSSQL_MSSQLSERVERPROD:Transactions|update_conflict_ratio|None|0
+MSSQL_MSSQLSERVERPROD:Transactions|update_conflict_ratio_base|None|0
+MSSQL_MSSQLSERVERPROD:Transactions|free_space_in_tempdb_(kb)|None|3889920
+MSSQL_MSSQLSERVERPROD:Transactions|version_generation_rate_(kb/s)|None|8673232
+MSSQL_MSSQLSERVERPROD:Transactions|version_cleanup_rate_(kb/s)|None|8672736
+MSSQL_MSSQLSERVERPROD:Transactions|version_store_size_(kb)|None|496
+MSSQL_MSSQLSERVERPROD:Transactions|version_store_unit_count|None|2
+MSSQL_MSSQLSERVERPROD:Transactions|version_store_unit_creation|None|20440
+MSSQL_MSSQLSERVERPROD:Transactions|version_store_unit_truncation|None|20438
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|sql_sends/sec|None|83
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|sql_send_total|None|83
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|sql_receives/sec|None|166
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|sql_receive_total|None|166
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|broker_transaction_rollbacks|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|dialog_timer_event_count|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_messages/sec|None|120
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_p1_messages/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_p2_messages/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_p3_messages/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_p4_messages/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_p5_messages/sec|None|120
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_p6_messages/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_p7_messages/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_p8_messages/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_p9_messages/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_p10_messages/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_local_messages/sec|None|120
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_transport_msgs/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_transport_msg_frags/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_messages_total|None|120
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_local_messages_total|None|120
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_transport_msgs_total|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_transport_msg_frag_tot|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|forwarded_pending_msg_count|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|forwarded_pending_msg_bytes|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|forwarded_msgs_discarded/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|forwarded_msg_discarded_total|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|forwarded_messages/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|forwarded_messages_total|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|forwarded_msg_bytes/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|forwarded_msg_byte_total|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|enqueued_transmissionq_msgs/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|dequeued_transmissionq_msgs/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|dropped_messages_total|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|corrupted_messages_total|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Statistics|activation_errors_total|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|open_connection_count|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|send_i/os/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|send_i/o_bytes/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|send_i/o_len_avg|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|send_i/o_len_avg_base|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|encryption_i/os/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|encrypted_i/o_bytes/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|decryption_i/os/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|decrypted_i/o_bytes/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|send_flow_control_gate|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|send_flow_control_enters/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|send_flow_control_exits/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|receive_flow_control_gate|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|receive_flow_control_enters/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|receive_flow_control_exits/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|receive_i/os/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|receive_i/o_bytes/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|receive_i/o_len_avg|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|receive_i/o_len_avg_base|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|message_fragment_sends/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|message_fragment_p1_sends/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|message_fragment_p2_sends/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|message_fragment_p3_sends/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|message_fragment_p4_sends/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|message_fragment_p5_sends/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|message_fragment_p6_sends/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|message_fragment_p7_sends/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|message_fragment_p8_sends/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|message_fragment_p9_sends/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|message_fragment_p10_sends/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|msg_fragment_send_size_avg|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|msg_fragment_send_size_avg_base|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|message_fragment_receives/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|msg_fragment_recv_size_avg|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|msg_fragment_recv_size_avg_base|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|pending_msg_frags_for_send_i/o|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|current_msg_frags_for_send_i/o|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|pending_bytes_for_send_i/o|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|current_bytes_for_send_i/o|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|pending_msg_frags_for_recv_i/o|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|current_bytes_for_recv_i/o|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|pending_bytes_for_recv_i/o|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|recv_i/o_buffer_copies_count|None|0
+MSSQL_MSSQLSERVERPROD:Broker/DBM_Transport|recv_i/o_buffer_copies_bytes/sec|None|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_started/sec|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_running|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_aborted/sec|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|task_limit_reached/sec|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|task_limit_reached|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|stored_procedures_invoked/sec|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_started/sec|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_running|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_aborted/sec|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|task_limit_reached/sec|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|task_limit_reached|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|stored_procedures_invoked/sec|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_started/sec|msdb|44
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_running|msdb|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_aborted/sec|msdb|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|task_limit_reached/sec|msdb|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|task_limit_reached|msdb|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|stored_procedures_invoked/sec|msdb|111
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_started/sec|tempdb|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_running|tempdb|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_aborted/sec|tempdb|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|task_limit_reached/sec|tempdb|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|task_limit_reached|tempdb|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|stored_procedures_invoked/sec|tempdb|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_started/sec|_Total|44
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_running|_Total|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|tasks_aborted/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|task_limit_reached/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|task_limit_reached|_Total|0
+MSSQL_MSSQLSERVERPROD:Broker_Activation|stored_procedures_invoked/sec|_Total|111
+MSSQL_MSSQLSERVERPROD:Broker_TO_Statistics|transmission_obj_gets/sec|None|111
+MSSQL_MSSQLSERVERPROD:Broker_TO_Statistics|transmission_obj_set_dirty/sec|None|222
+MSSQL_MSSQLSERVERPROD:Broker_TO_Statistics|transmission_obj_writes/sec|None|8
+MSSQL_MSSQLSERVERPROD:Broker_TO_Statistics|avg._length_of_batched_writes|None|82
+MSSQL_MSSQLSERVERPROD:Broker_TO_Statistics|avg._length_of_batched_writes_bs|None|609693
+MSSQL_MSSQLSERVERPROD:Broker_TO_Statistics|avg._time_to_write_batch_(ms)|None|180
+MSSQL_MSSQLSERVERPROD:Broker_TO_Statistics|avg._time_to_write_batch_base|None|609693
+MSSQL_MSSQLSERVERPROD:Broker_TO_Statistics|avg._time_between_batches_(ms)|None|1251772558
+MSSQL_MSSQLSERVERPROD:Broker_TO_Statistics|avg._time_between_batches_base|None|609692
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|lock_waits|Average_wait_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|memory_grant_queue_waits|Average_wait_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|thread-safe_memory_objects_waits|Average_wait_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|log_write_waits|Average_wait_time_(ms)|1
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|log_buffer_waits|Average_wait_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|network_io_waits|Average_wait_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|page_io_latch_waits|Average_wait_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|page_latch_waits|Average_wait_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|non-page_latch_waits|Average_wait_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|wait_for_the_worker|Average_wait_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|workspace_synchronization_waits|Average_wait_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|transaction_ownership_waits|Average_wait_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|lock_waits|Waits_in_progress|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|memory_grant_queue_waits|Waits_in_progress|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|thread-safe_memory_objects_waits|Waits_in_progress|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|log_write_waits|Waits_in_progress|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|log_buffer_waits|Waits_in_progress|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|network_io_waits|Waits_in_progress|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|page_io_latch_waits|Waits_in_progress|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|page_latch_waits|Waits_in_progress|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|non-page_latch_waits|Waits_in_progress|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|wait_for_the_worker|Waits_in_progress|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|workspace_synchronization_waits|Waits_in_progress|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|transaction_ownership_waits|Waits_in_progress|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|lock_waits|Waits_started_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|memory_grant_queue_waits|Waits_started_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|thread-safe_memory_objects_waits|Waits_started_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|log_write_waits|Waits_started_per_second|332
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|log_buffer_waits|Waits_started_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|network_io_waits|Waits_started_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|page_io_latch_waits|Waits_started_per_second|1
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|page_latch_waits|Waits_started_per_second|923
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|non-page_latch_waits|Waits_started_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|wait_for_the_worker|Waits_started_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|workspace_synchronization_waits|Waits_started_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|transaction_ownership_waits|Waits_started_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|lock_waits|Cumulative_wait_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|memory_grant_queue_waits|Cumulative_wait_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|thread-safe_memory_objects_waits|Cumulative_wait_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|log_write_waits|Cumulative_wait_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|log_buffer_waits|Cumulative_wait_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|network_io_waits|Cumulative_wait_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|page_io_latch_waits|Cumulative_wait_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|page_latch_waits|Cumulative_wait_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|non-page_latch_waits|Cumulative_wait_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|wait_for_the_worker|Cumulative_wait_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|workspace_synchronization_waits|Cumulative_wait_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Wait_Statistics|transaction_ownership_waits|Cumulative_wait_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|extended_procedures|Average_execution_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|dtc_calls|Average_execution_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|oledb_calls|Average_execution_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|distributed_query|Average_execution_time_(ms)|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|extended_procedures|Execs_in_progress|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|dtc_calls|Execs_in_progress|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|oledb_calls|Execs_in_progress|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|distributed_query|Execs_in_progress|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|extended_procedures|Execs_started_per_second|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|dtc_calls|Execs_started_per_second|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|oledb_calls|Execs_started_per_second|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|distributed_query|Execs_started_per_second|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|extended_procedures|Cumulative_execution_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|dtc_calls|Cumulative_execution_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|oledb_calls|Cumulative_execution_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:Exec_Statistics|distributed_query|Cumulative_execution_time_(ms)_per_second|0
+MSSQL_MSSQLSERVERPROD:CLR|clr_execution|None|270554492115
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio|tempdb|287502704
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio_base|tempdb|291145503
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_count|tempdb|1335
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_pinned_count|tempdb|-11102
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio|model|141322
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio_base|model|143756
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_count|model|99
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_pinned_count|model|0
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio|xTrackWMS|820500608
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio_base|xTrackWMS|1302132112
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_count|xTrackWMS|5026
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_pinned_count|xTrackWMS|12
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio|mssqlsystemresource|29624079
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio_base|mssqlsystemresource|29828500
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_count|mssqlsystemresource|2352
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_pinned_count|mssqlsystemresource|0
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio|ReportServer$MSSQLSERVERPRODTempDB|505318
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio_base|ReportServer$MSSQLSERVERPRODTempDB|507924
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_count|ReportServer$MSSQLSERVERPRODTempDB|140
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_pinned_count|ReportServer$MSSQLSERVERPRODTempDB|0
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio|xTrackWMS_ARCHIVE|447037
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio_base|xTrackWMS_ARCHIVE|453593
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_count|xTrackWMS_ARCHIVE|145
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_pinned_count|xTrackWMS_ARCHIVE|0
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio|DBA|22093963
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio_base|DBA|22428531
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_count|DBA|184
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_pinned_count|DBA|5
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio|MAMMOTHMailer|753267
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio_base|MAMMOTHMailer|797997
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_count|MAMMOTHMailer|194
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_pinned_count|MAMMOTHMailer|0
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio|ReportServer$MSSQLSERVERPROD|3847774
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio_base|ReportServer$MSSQLSERVERPROD|3879470
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_count|ReportServer$MSSQLSERVERPROD|187
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_pinned_count|ReportServer$MSSQLSERVERPROD|0
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio|msdb|18428824
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio_base|msdb|21041158
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_count|msdb|939
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_pinned_count|msdb|3
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio|_Total|1208056971
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio_base|_Total|1696912989
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_count|_Total|10805
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_pinned_count|_Total|-11081
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio|master|24212075
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_hit_ratio_base|master|24554445
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_count|master|204
+MSSQL_MSSQLSERVERPROD:Catalog_Metadata|cache_entries_pinned_count|master|1
+MSSQL_MSSQLSERVERPROD:Workload_Group_Stats|cpu_usage_%|internal|0
+MSSQL_MSSQLSERVERPROD:Workload_Group_Stats|cpu_usage_%_base|internal|0
+MSSQL_MSSQLSERVERPROD:Workload_Group_Stats|queued_requests|internal|0
+MSSQL_MSSQLSERVERPROD:Workload_Group_Stats|active_requests|internal|0
+MSSQL_MSSQLSERVERPROD:Workload_Group_Stats|requests_completed/sec|internal|0
+MSSQL_MSSQLSERVERPROD:Workload_Group_Stats|max_request_cpu_time_(ms)|internal|0
+MSSQL_MSSQLSERVERPROD:Workload_Group_Stats|blocked_tasks|internal|0
+MSSQL_MSSQLSERVERPROD:Workload_Group_Stats|reduced_memory_grants/sec|internal|0
+MSSQL_MSSQLSERVERPROD:Workload_Group_Stats|max_request_memory_grant_(kb)|internal|0
+MSSQL_MSSQLSERVERPROD:Workload_Group_Stats|query_optimizations/sec|internal|6385456
+MSSQL_MSSQLSERVERPROD:Workload_Group_Stats|suboptimal_plans/sec|internal|60286
+MSSQL_MSSQLSERVERPROD:Workload_Group_Stats|active_parallel_threads|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|cpu_usage_%|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|cpu_usage_%_base|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|cpu_usage_target_%|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|cpu_control_effect_%|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|compile_memory_target_(kb)|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|cache_memory_target_(kb)|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|query_exec_memory_target_(kb)|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|memory_grants/sec|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|active_memory_grants_count|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|memory_grant_timeouts/sec|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|active_memory_grant_amount_(kb)|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|pending_memory_grants_count|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|max_memory_(kb)|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|used_memory_(kb)|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|target_memory_(kb)|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|disk_read_io/sec|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|disk_read_io_throttled/sec|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|disk_read_bytes/sec|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|avg_disk_read_io_(ms)|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|avg_disk_read_io_(ms)_base|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|disk_write_io/sec|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|disk_write_io_throttled/sec|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|disk_write_bytes/sec|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|avg_disk_write_io_(ms)|internal|0
+MSSQL_MSSQLSERVERPROD:Resource_Pool_Stats|avg_disk_write_io_(ms)_base|internal|0
+MSSQL_MSSQLSERVERPROD:FileTable|filetable_db_operations/sec|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|filetable_table_operations/sec|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|filetable_item_get_requests/sec|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|avg_time_to_get_filetable_item|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|time_to_get_filetable_item_base|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|filetable_item_delete_reqs/sec|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|avg_time_delete_filetable_item|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|time_delete_filetable_item_base|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|filetable_item_update_reqs/sec|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|avg_time_update_filetable_item|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|time_update_filetable_item_base|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|filetable_item_move_reqs/sec|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|avg_time_move_filetable_item|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|time_move_filetable_item_base|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|filetable_item_rename_reqs/sec|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|avg_time_rename_filetable_item|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|time_rename_filetable_item_base|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|filetable_enumeration_reqs/sec|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|avg_time_filetable_enumeration|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|time_filetable_enumeration_base|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|filetable_file_i/o_requests/sec|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|avg_time_per_file_i/o_request|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|time_per_file_i/o_request_base|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|filetable_file_i/o_response/sec|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|avg_time_per_file_i/o_response|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|time_per_file_i/o_response_base|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|filetable_kill_handle_ops/sec|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|avg_time_filetable_handle_kill|None|0
+MSSQL_MSSQLSERVERPROD:FileTable|time_filetable_handle_kill_base|None|0
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000000ms_&_<000001ms|CPU_Time:Total(ms)|0
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000001ms_&_<000002ms|CPU_Time:Total(ms)|18094394
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000002ms_&_<000005ms|CPU_Time:Total(ms)|4695692
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000005ms_&_<000010ms|CPU_Time:Total(ms)|9556596
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000010ms_&_<000020ms|CPU_Time:Total(ms)|9912871
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000020ms_&_<000050ms|CPU_Time:Total(ms)|26506483
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000050ms_&_<000100ms|CPU_Time:Total(ms)|10390781
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000100ms_&_<000200ms|CPU_Time:Total(ms)|401558761
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000200ms_&_<000500ms|CPU_Time:Total(ms)|156804421
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000500ms_&_<001000ms|CPU_Time:Total(ms)|30474705
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=001000ms_&_<002000ms|CPU_Time:Total(ms)|165272288
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=002000ms_&_<005000ms|CPU_Time:Total(ms)|141153198
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=005000ms_&_<010000ms|CPU_Time:Total(ms)|31872278
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=010000ms_&_<020000ms|CPU_Time:Total(ms)|87883458
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=020000ms_&_<050000ms|CPU_Time:Total(ms)|365804704
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=050000ms_&_<100000ms|CPU_Time:Total(ms)|272796807
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=100000ms|CPU_Time:Total(ms)|494482271
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000000ms_&_<000001ms|CPU_Time:Requests|162968200
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000001ms_&_<000002ms|CPU_Time:Requests|18094394
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000002ms_&_<000005ms|CPU_Time:Requests|1549757
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000005ms_&_<000010ms|CPU_Time:Requests|1504516
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000010ms_&_<000020ms|CPU_Time:Requests|721212
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000020ms_&_<000050ms|CPU_Time:Requests|782032
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000050ms_&_<000100ms|CPU_Time:Requests|150973
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000100ms_&_<000200ms|CPU_Time:Requests|2186293
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000200ms_&_<000500ms|CPU_Time:Requests|653874
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000500ms_&_<001000ms|CPU_Time:Requests|41985
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=001000ms_&_<002000ms|CPU_Time:Requests|113525
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=002000ms_&_<005000ms|CPU_Time:Requests|50857
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=005000ms_&_<010000ms|CPU_Time:Requests|4554
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=010000ms_&_<020000ms|CPU_Time:Requests|6010
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=020000ms_&_<050000ms|CPU_Time:Requests|11103
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=050000ms_&_<100000ms|CPU_Time:Requests|4502
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=100000ms|CPU_Time:Requests|1489
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000000ms_&_<000001ms|Elapsed_Time:Total(ms)|0
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000001ms_&_<000002ms|Elapsed_Time:Total(ms)|6357413
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000002ms_&_<000005ms|Elapsed_Time:Total(ms)|24888751
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000005ms_&_<000010ms|Elapsed_Time:Total(ms)|11299932
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000010ms_&_<000020ms|Elapsed_Time:Total(ms)|11919107
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000020ms_&_<000050ms|Elapsed_Time:Total(ms)|33853780
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000050ms_&_<000100ms|Elapsed_Time:Total(ms)|36251099
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000100ms_&_<000200ms|Elapsed_Time:Total(ms)|363054480
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000200ms_&_<000500ms|Elapsed_Time:Total(ms)|304024516
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000500ms_&_<001000ms|Elapsed_Time:Total(ms)|60539732
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=001000ms_&_<002000ms|Elapsed_Time:Total(ms)|160689960
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=002000ms_&_<005000ms|Elapsed_Time:Total(ms)|206082373
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=005000ms_&_<010000ms|Elapsed_Time:Total(ms)|60601325
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=010000ms_&_<020000ms|Elapsed_Time:Total(ms)|79933337
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=020000ms_&_<050000ms|Elapsed_Time:Total(ms)|416705094
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=050000ms_&_<100000ms|Elapsed_Time:Total(ms)|265749919
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=100000ms|Elapsed_Time:Total(ms)|489546844
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000000ms_&_<000001ms|Elapsed_Time:Requests|168215348
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000001ms_&_<000002ms|Elapsed_Time:Requests|6357413
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000002ms_&_<000005ms|Elapsed_Time:Requests|6616818
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000005ms_&_<000010ms|Elapsed_Time:Requests|1743319
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000010ms_&_<000020ms|Elapsed_Time:Requests|863755
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000020ms_&_<000050ms|Elapsed_Time:Requests|979745
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000050ms_&_<000100ms|Elapsed_Time:Requests|511848
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000100ms_&_<000200ms|Elapsed_Time:Requests|2041262
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000200ms_&_<000500ms|Elapsed_Time:Requests|1103669
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=000500ms_&_<001000ms|Elapsed_Time:Requests|89459
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=001000ms_&_<002000ms|Elapsed_Time:Requests|109870
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=002000ms_&_<005000ms|Elapsed_Time:Requests|71514
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=005000ms_&_<010000ms|Elapsed_Time:Requests|8877
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=010000ms_&_<020000ms|Elapsed_Time:Requests|5433
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=020000ms_&_<050000ms|Elapsed_Time:Requests|11946
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=050000ms_&_<100000ms|Elapsed_Time:Requests|4389
+MSSQL_MSSQLSERVERPROD:Batch_Resp_Statistics|batches_>=100000ms|Elapsed_Time:Requests|1642
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|read_bytes/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|write_bytes/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|total_bytes/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|reads/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|writes/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|transfers/sec|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|avg._bytes/read|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|avg._bytes/read_base|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|avg._bytes/write|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|avg._bytes/write_base|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|avg._bytes/transfer|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|avg._bytes/transfer_base|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|avg._microsec/read|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|avg._microsec/read_base|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|avg._microsec/write|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|avg._microsec/write_base|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|avg._microsec/transfer|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|avg._microsec/transfer_base|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|outstanding_http_storage_io|_Total|0
+MSSQL_MSSQLSERVERPROD:HTTP_Storage|http_storage_io_retry/sec|_Total|0
+<<<mssql_blocked_sessions:sep(124):cached(1646726809,300)>>>
+MSSQLSERVERPROD|No blocking sessions
+<<<mssql_tablespaces:cached(1646726809,300)>>>
+MSSQL_MSSQLSERVERPROD master 36.88 MB 1.02 MB 30448 KB 28016 KB 1688 KB 744 KB
+MSSQL_MSSQLSERVERPROD tempdb 4216.50 MB 3942.71 MB 17704 KB 7544 KB 3712 KB 6448 KB
+MSSQL_MSSQLSERVERPROD model 4216.50 MB 3942.70 MB 17720 KB 7544 KB 3728 KB 6448 KB
+MSSQL_MSSQLSERVERPROD msdb 1026.81 MB 129.34 MB 754336 KB 652304 KB 27160 KB 74872 KB
+MSSQL_MSSQLSERVERPROD ReportServer$MSSQLSERVERPROD 1026.81 MB 129.34 MB 754336 KB 652304 KB 27160 KB 74872 KB
+MSSQL_MSSQLSERVERPROD ReportServer$MSSQLSERVERPRODTempDB 1026.81 MB 129.34 MB 754336 KB 652304 KB 27160 KB 74872 KB
+MSSQL_MSSQLSERVERPROD MAMMOTHMailer 1026.81 MB 129.34 MB 754336 KB 652304 KB 27160 KB 74872 KB
+MSSQL_MSSQLSERVERPROD DBA 1026.81 MB 129.34 MB 754336 KB 652304 KB 27160 KB 74872 KB
+MSSQL_MSSQLSERVERPROD xTrackWMS_ARCHIVE 1026.81 MB 129.34 MB 754336 KB 652304 KB 27160 KB 74872 KB
+MSSQL_MSSQLSERVERPROD xTrackWMS 377713.00 MB 744.97 MB 347986976 KB 286451144 KB 61110888 KB 424944 KB
+<<<mssql_backup:sep(124):cached(1646726809,300)>>>
+MSSQL_MSSQLSERVERPROD|master|2022-03-07|12:00:08|D
+MSSQL_MSSQLSERVERPROD|tempdb|-|-|-|no backup found
+MSSQL_MSSQLSERVERPROD|model|2022-03-07|12:00:12|D
+MSSQL_MSSQLSERVERPROD|msdb|2022-03-07|12:00:18|D
+MSSQL_MSSQLSERVERPROD|ReportServer$MSSQLSERVERPROD|2022-03-08|10:03:00|L
+MSSQL_MSSQLSERVERPROD|ReportServer$MSSQLSERVERPROD|2022-03-08|03:36:13|D
+MSSQL_MSSQLSERVERPROD|ReportServer$MSSQLSERVERPRODTempDB|2022-03-08|03:36:14|D
+MSSQL_MSSQLSERVERPROD|MAMMOTHMailer|2022-03-08|10:03:00|L
+MSSQL_MSSQLSERVERPROD|MAMMOTHMailer|2022-03-08|03:35:05|D
+MSSQL_MSSQLSERVERPROD|DBA|2022-03-08|03:31:24|D
+MSSQL_MSSQLSERVERPROD|xTrackWMS_ARCHIVE|2022-03-08|10:03:02|L
+MSSQL_MSSQLSERVERPROD|xTrackWMS_ARCHIVE|2022-03-08|04:16:09|D
+MSSQL_MSSQLSERVERPROD|xTrackWMS|2022-03-08|10:03:01|L
+MSSQL_MSSQLSERVERPROD|xTrackWMS|2022-03-08|03:57:51|D
+<<<mssql_transactionlogs:sep(124):cached(1646726809,300)>>>
+MSSQLSERVERPROD|master|mastlog|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\mastlog.ldf|0|6|2|1
+MSSQLSERVERPROD|tempdb|templog|E:\LOG\templog.ldf|0|256|41|1
+MSSQLSERVERPROD|model|templog|E:\LOG\templog.ldf|0|256|41|1
+MSSQLSERVERPROD|msdb|MSDBLog|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\MSDBLog.ldf|2097152|160|11|0
+MSSQLSERVERPROD|ReportServer$MSSQLSERVERPROD|MSDBLog|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\MSDBLog.ldf|2097152|160|11|0
+MSSQLSERVERPROD|ReportServer$MSSQLSERVERPRODTempDB|MSDBLog|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\MSDBLog.ldf|2097152|160|11|0
+MSSQLSERVERPROD|MAMMOTHMailer|MSDBLog|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\MSDBLog.ldf|2097152|160|11|0
+MSSQLSERVERPROD|DBA|MSDBLog|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\MSDBLog.ldf|2097152|160|11|0
+MSSQLSERVERPROD|xTrackWMS_ARCHIVE|MSDBLog|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\MSDBLog.ldf|2097152|160|11|0
+MSSQLSERVERPROD|xTrackWMS|xTrackWMS_log|G:\DB_Files\xTrackWMS_log.ldf|2097152|37137|78|0
+<<<mssql_datafiles:sep(124):cached(1646726809,300)>>>
+MSSQLSERVERPROD|master|master|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\master.mdf|0|30|29|1
+MSSQLSERVERPROD|tempdb|tempdev|E:\Data\tempdev.mdf|0|584|25|1
+MSSQLSERVERPROD|tempdb|tempdev2|E:\Data\tempdev2.ndf|0|520|21|1
+MSSQLSERVERPROD|tempdb|tempdev3|E:\Data\tempdev3.ndf|0|520|23|1
+MSSQLSERVERPROD|tempdb|tempdev4|E:\Data\tempdev4.ndf|0|584|21|1
+MSSQLSERVERPROD|tempdb|tempdev5|E:\Data\tempdev5.ndf|0|584|22|1
+MSSQLSERVERPROD|tempdb|tempdev6|E:\Data\tempdev6.ndf|0|584|24|1
+MSSQLSERVERPROD|tempdb|tempdev7|E:\Data\tempdev7.ndf|0|584|22|1
+MSSQLSERVERPROD|model|tempdev|E:\Data\tempdev.mdf|0|584|25|1
+MSSQLSERVERPROD|model|tempdev2|E:\Data\tempdev2.ndf|0|520|21|1
+MSSQLSERVERPROD|model|tempdev3|E:\Data\tempdev3.ndf|0|520|23|1
+MSSQLSERVERPROD|model|tempdev4|E:\Data\tempdev4.ndf|0|584|21|1
+MSSQLSERVERPROD|model|tempdev5|E:\Data\tempdev5.ndf|0|584|22|1
+MSSQLSERVERPROD|model|tempdev6|E:\Data\tempdev6.ndf|0|584|24|1
+MSSQLSERVERPROD|model|tempdev7|E:\Data\tempdev7.ndf|0|584|22|1
+MSSQLSERVERPROD|msdb|MSDBData|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\MSDBData.mdf|0|866|741|1
+MSSQLSERVERPROD|ReportServer$MSSQLSERVERPROD|MSDBData|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\MSDBData.mdf|0|866|741|1
+MSSQLSERVERPROD|ReportServer$MSSQLSERVERPRODTempDB|MSDBData|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\MSDBData.mdf|0|866|741|1
+MSSQLSERVERPROD|MAMMOTHMailer|MSDBData|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\MSDBData.mdf|0|866|741|1
+MSSQLSERVERPROD|DBA|MSDBData|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\MSDBData.mdf|0|866|741|1
+MSSQLSERVERPROD|xTrackWMS_ARCHIVE|MSDBData|C:\Program_Files\Microsoft_SQL_Server\MSSQL12.MSSQLSERVERPROD\MSSQL\DATA\MSDBData.mdf|0|866|741|1
+MSSQLSERVERPROD|xTrackWMS|xTrackWMS|H:\DB_Files\xTrackWMS.mdf|0|340576|339852|1
+<<<mssql_databases:sep(124):cached(1646726809,300)>>>
+MSSQLSERVERPROD|master|ONLINE|SIMPLE|0|0
+MSSQLSERVERPROD|tempdb|ONLINE|SIMPLE|0|0
+MSSQLSERVERPROD|model|ONLINE|FULL|0|0
+MSSQLSERVERPROD|msdb|ONLINE|SIMPLE|0|0
+MSSQLSERVERPROD|ReportServer$MSSQLSERVERPROD|ONLINE|FULL|0|0
+MSSQLSERVERPROD|ReportServer$MSSQLSERVERPRODTempDB|ONLINE|SIMPLE|0|0
+MSSQLSERVERPROD|MAMMOTHMailer|ONLINE|FULL|0|0
+MSSQLSERVERPROD|DBA|ONLINE|SIMPLE|0|0
+MSSQLSERVERPROD|xTrackWMS_ARCHIVE|ONLINE|FULL|0|0
+MSSQLSERVERPROD|xTrackWMS|ONLINE|FULL|0|0
+<<<mssql_cluster:sep(124):cached(1646726809,300)>>>
+<<<mssql_connections:cached(1646726809,300)>>>
+MSSQLSERVERPROD DBA 3
+MSSQLSERVERPROD MAMMOTHMailer 0
+MSSQLSERVERPROD master 41
+MSSQLSERVERPROD model 0
+MSSQLSERVERPROD msdb 4
+MSSQLSERVERPROD ReportServer$MSSQLSERVERPROD 1
+MSSQLSERVERPROD ReportServer$MSSQLSERVERPRODTempDB 0
+MSSQLSERVERPROD tempdb 0
+MSSQLSERVERPROD xTrackWMS 78
+MSSQLSERVERPROD xTrackWMS_ARCHIVE 0
+<<<mssql_jobs:sep(09):cached(1646726809,300)>>>
+MSSQLSERVERPROD ERROR: The SELECT permission was denied on the object 'sysschedules', database 'msdb', schema 'dbo'. (SQLState: 42000/NativeError: 229). 
+<<<>>>
+<<<systemtime>>>
+1646727033
