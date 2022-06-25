@@ -1,3 +1,5 @@
+moved here: https://code.spearhead.cloud/mpana/checkmk-agent-output/settings
+
 # checkmk-agent-output
 A collection of Checkmk agent outputs (snmp or other) from systems and applications that can be used in simulation mode or for development purposes such as extending an existing agent or building a new one. 
 
